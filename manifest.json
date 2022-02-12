@@ -1,0 +1,29 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "fcc-utility",
+    "default_popup": "index.html",
+    "default_icon": "logo.png"
+  },
+  "icons": {
+    "512": "logo.png"
+},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts" : [
+		{
+			"matches" : [
+				"<all_urls>"
+      ],
+      "js" : ["content.js"]
+    }
+  ],
+  "description": "Needed to test people on FCC.",
+  "manifest_version": 2,
+  "name": "FCC Utility",
+  "permissions": [
+    "activeTab"
+  ],
+  "version": "1.0"
+}
