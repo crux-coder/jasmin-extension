@@ -1,5 +1,4 @@
-# QR Share
+# FCC-Utility
 
-## What it does
-
-This extension allows you to go to the same page on your mobile just by scanning the QR Code.
+Link to icon creator:
+<a href="https://www.vecteezy.com/free-vector/flame-icon">Flame Icon Vectors by Vecteezy</a>
