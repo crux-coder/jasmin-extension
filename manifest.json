@@ -7,17 +7,20 @@
   },
   "icons": {
     "512": "logo.png"
-},
-  "background": {
-    "scripts":["background.js"]
   },
-  "description": "Needed to test people on FCC.",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "description": "Testing people on FreeCodeCamp.",
   "manifest_version": 2,
   "name": "FCC Utility",
   "permissions": [
     "tabs",
     "activeTab",
-    "https://www.freecodecamp.org/*"
+    "https://www.freecodecamp.org/*",
+    "storage"
   ],
-  "version": "1.0"
+  "version": "0.1"
 }
