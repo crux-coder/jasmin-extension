@@ -1,7 +1,7 @@
 {
   "browser_action": {
     "browser_style": true,
-    "default_title": "fcc-utility",
+    "default_title": "jasmins-extension",
     "default_popup": "index.html",
     "default_icon": "logo.png"
   },
@@ -13,14 +13,14 @@
       "background.js"
     ]
   },
-  "description": "Testing people on FreeCodeCamp.",
+  "description": "Extension for taking the Jasmin's test..",
   "manifest_version": 2,
-  "name": "FCC Utility",
+  "name": "Jasmin's Extension",
   "permissions": [
     "tabs",
     "activeTab",
     "https://www.freecodecamp.org/*",
     "storage"
   ],
-  "version": "0.1"
+  "version": "0.1.1"
 }
