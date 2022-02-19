@@ -1,36 +1,26 @@
-/* general styling */
 html,
 body {
-  height: 100%;
-  margin: 0;
+  width: 400px;
 }
 
-body {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container {
+.slider-container {
   margin: 0 auto;
   padding: 3px;
 }
 
-.button {
-  background-color: #66bb6a; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+select {
+  width: 100%;
   cursor: pointer;
-  width: max-content;
+}
+
+.button {
+  width: 100%;
   border: 2px solid #666;
+}
+
+.go-btn {
+  width: 100%;
+  border: 1px solid #666;
 }
 
 .slider {
@@ -41,6 +31,8 @@ body {
   -ms-user-select: none;
   user-select: none;
   width: 125px;
+  margin: auto;
+  right: 0;
 }
 
 .slider-checkbox {
@@ -77,7 +69,7 @@ body {
 }
 
 .slider-inner:before {
-  background-color: #66bb6a;
+  background-color: #198754;
   color: #fff;
   content: 'ON';
   padding-left: 0.75em;
@@ -92,9 +84,9 @@ body {
 }
 
 .slider-circle {
-  background-color: #66bb6a;
+  background-color: #198754;
   border: 2px solid #666;
-  border-radius: 20px;
+  border-radius: 30px;
   bottom: 0;
   display: block;
   margin: 5px;
@@ -102,7 +94,7 @@ body {
   right: 91px;
   top: 0;
   transition: all 0.2s ease-in 0s;
-  width: 20px;
+  width: 24px;
 }
 
 .slider-checkbox:checked + .slider-label .slider-inner {
@@ -112,4 +104,16 @@ body {
 .slider-checkbox:checked + .slider-label .slider-circle {
   background-color: #eee;
   right: 0;
+}
+
+/* Bootstrap override */
+.row {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.col,
+.col-10,
+.col-2 {
+  padding: 2px;
 }

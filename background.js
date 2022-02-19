@@ -1,6 +1,3 @@
-let completedChallenges = [];
-let challengesCompletedCounter = 0;
-
 const challenges = [
   'https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements',
   'https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element',
@@ -190,12 +187,7 @@ const challenges = [
   'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fill',
   'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit',
   'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-media-queries-to-create-responsive-layouts',
-  'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids'
-];
-
-const whiteListedURLs = [
-  'https://auth.freecodecamp.org/login',
-  ...challenges,
+  'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids',
 ];
 
 function executeScript(script) {
@@ -221,50 +213,48 @@ function clearHelpers() {
 function isURLWhitelisted(url) {
   if (!url) return false;
 
-  for (let i = 0; i < whiteListedURLs.length; i++) {
-    if (url.startsWith(whiteListedURLs[i])) return true;
-  };
+  for (let i = 0; i < challenges.length; i++) {
+    if (url.startsWith(challenges[i])) return true;
+  }
 
   return false;
 }
 
-function updateChallengesArrays(items) {
-  const counter = items.challengesCompleted;
-  console.log(counter, completedChallenges.length);
-  while (counter > completedChallenges.length)
-    completedChallenges.push(challenges.shift());
-}
-
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  chrome.storage.sync.get("challengesCompleted", function (items) {
-    updateChallengesArrays(items);
-    chrome.storage.sync.get("fccUtilityOn", function (items) {
-      const switchOn = items.fccUtilityOn;
+  chrome.storage.local.get('challengeIndex', function (items) {
+    chrome.storage.local.get('fccUtilityOn', function (_items) {
+      const switchOn = _items.fccUtilityOn;
       chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         if (!switchOn) return;
         if (isURLWhitelisted(tabs[0]?.url)) {
-          if (tabs[0]?.url.startsWith(challenges[0]))
+          if (tabs[0]?.url.startsWith(challenges[items.challengeIndex]))
             executeScript(clearHelpers);
-          else if (tabs[0]?.url.startsWith(challenges[1])) {
+          else if (
+            tabs[0]?.url.startsWith(challenges[items.challengeIndex + 1])
+          ) {
+            console.log('shiiiiit', items.challengeIndex + 1);
             executeScript(clearHelpers);
-            completedChallenges.push(challenges.shift());
-            challengesCompletedCounter++;
-            chrome.storage.sync.set({ "challengesCompleted": challengesCompletedCounter });
+            chrome.storage.local.set({
+              challengeIndex: items.challengeIndex + 1,
+            });
           } else {
             chrome.tabs.update({
-              url: challenges[0],
+              url: challenges[items.challengeIndex],
             });
             executeScript(clearHelpers);
           }
         } else {
           chrome.tabs.update({
-            url: challenges[0],
+            url: challenges[items.challengeIndex],
           });
+          executeScript(clearHelpers);
         }
-        console.log('Challenges', challenges.length);
-        console.log('Completed:', completedChallenges.length);
       });
-
     });
   });
 });
+
+(function () {
+  chrome.storage.local.set({ challengeIndex: 0 });
+  chrome.storage.local.set({ fccUtilityOn: false });
+})();
