@@ -22,6 +22,6 @@
     "https://www.freecodecamp.org/*",
     "storage"
   ],
-  "version": "0.1.1",
+  "version": "0.2.1",
   "content_security_policy": "default-src *; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';img-src 'self' data: *; script-src 'self' 'unsafe-inline' 'unsafe-eval'"
 }
