@@ -5,6 +5,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 ## Legend
  - FCC - Free Code Camp
  - :construction:  -> Comming soon
+ - :warning: -> Buggy (not a beach buggy)
  - :white_check_mark: -> Fully implemented
 
 ## Features
@@ -20,34 +21,34 @@ This extension will hide all the help on the Free Code Camp website so you can f
 
 
 ##  Basic Html And Html5 
-- [ Say Hello To Html Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements) 
-- [ Headline With The H2 Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element) 
-- [ Inform With The Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/inform-with-the-paragraph-element) 
-- [ Fill In The Blank With Placeholder Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/fill-in-the-blank-with-placeholder-text) 
-- [ Uncomment Html](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/uncomment-html) 
-- [ Comment Out Html](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/comment-out-html) 
-- [ Delete Html Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/delete-html-elements) 
-- [ Introduction To Html5 Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/introduction-to-html5-elements) 
-- [ Add Images To Your Website](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-images-to-your-website) 
-- [ Link To External Pages With Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-external-pages-with-anchor-elements) 
-- [ Link To Internal Sections Of A Page With Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-internal-sections-of-a-page-with-anchor-elements) 
-- [ Nest An Anchor Element Within A Paragraph](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-an-anchor-element-within-a-paragraph) 
-- [ Make Dead Links Using The Hash Symbol](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/make-dead-links-using-the-hash-symbol) 
-- [ Turn An Image Into A Link](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/turn-an-image-into-a-link) 
-- [ Create A Bulleted Unordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-bulleted-unordered-list) 
-- [ Create An Ordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-an-ordered-list) 
-- [ Create A Text Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-text-field) 
-- [ Add Placeholder Text To A Text Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-placeholder-text-to-a-text-field) 
-- [ Create A Form Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-form-element) 
-- [ Add A Submit Button To A Form](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-a-submit-button-to-a-form) 
-- [ Use Html5 To Require A Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/use-html5-to-require-a-field) 
-- [ Create A Set Of Radio Buttons](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-set-of-radio-buttons) 
-- [ Create A Set Of Checkboxes](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-set-of-checkboxes) 
-- [ Use The Value Attribute With Radio Buttons And Checkboxes](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/use-the-value-attribute-with-radio-buttons-and-checkboxes) 
-- [ Check Radio Buttons And Checkboxes By Default](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/check-radio-buttons-and-checkboxes-by-default) 
-- [ Nest Many Elements Within A Single Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-many-elements-within-a-single-div-element) 
-- [ Declare The Doctype Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/declare-the-doctype-of-an-html-document) 
-- [ Define The Head And Body Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/define-the-head-and-body-of-an-html-document) 
+- [ Say Hello To Html Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements) :white_check_mark:
+- [ Headline With The H2 Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element) :white_check_mark:
+- [ Inform With The Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/inform-with-the-paragraph-element) :white_check_mark:
+- [ Fill In The Blank With Placeholder Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/fill-in-the-blank-with-placeholder-text) :white_check_mark:
+- [ Uncomment Html](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/uncomment-html) :white_check_mark:
+- [ Comment Out Html](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/comment-out-html) :white_check_mark:
+- [ Delete Html Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/delete-html-elements) :white_check_mark:
+- [ Introduction To Html5 Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/introduction-to-html5-elements) :white_check_mark:
+- [ Add Images To Your Website](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-images-to-your-website) :white_check_mark:
+- [ Link To External Pages With Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-external-pages-with-anchor-elements) :white_check_mark: 
+- [ Link To Internal Sections Of A Page With Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-internal-sections-of-a-page-with-anchor-elements) :white_check_mark:
+- [ Nest An Anchor Element Within A Paragraph](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-an-anchor-element-within-a-paragraph) :white_check_mark:
+- [ Make Dead Links Using The Hash Symbol](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/make-dead-links-using-the-hash-symbol) :white_check_mark:
+- [ Turn An Image Into A Link](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/turn-an-image-into-a-link) :white_check_mark:
+- [ Create A Bulleted Unordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-bulleted-unordered-list) :white_check_mark:
+- [ Create An Ordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-an-ordered-list) :white_check_mark:
+- [ Create A Text Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-text-field) :white_check_mark:
+- [ Add Placeholder Text To A Text Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-placeholder-text-to-a-text-field) :white_check_mark:
+- [ Create A Form Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-form-element) :white_check_mark:
+- [ Add A Submit Button To A Form](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/add-a-submit-button-to-a-form) :white_check_mark:
+- [ Use Html5 To Require A Field](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/use-html5-to-require-a-field) :white_check_mark:
+- [ Create A Set Of Radio Buttons](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-set-of-radio-buttons) :white_check_mark:
+- [ Create A Set Of Checkboxes](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-set-of-checkboxes) :white_check_mark:
+- [ Use The Value Attribute With Radio Buttons And Checkboxes](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/use-the-value-attribute-with-radio-buttons-and-checkboxes) :white_check_mark:
+- [ Check Radio Buttons And Checkboxes By Default](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/check-radio-buttons-and-checkboxes-by-default) :white_check_mark:
+- [ Nest Many Elements Within A Single Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-many-elements-within-a-single-div-element) :white_check_mark:
+- [ Declare The Doctype Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/declare-the-doctype-of-an-html-document) :white_check_mark:
+- [ Define The Head And Body Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/define-the-head-and-body-of-an-html-document) :white_check_mark:
 ##  Basic Css 
 - [ Change The Color Of Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-color-of-text) 
 - [ Use Css Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-selectors-to-style-elements) 
