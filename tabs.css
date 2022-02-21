@@ -71,14 +71,14 @@ select {
 .slider-inner:before {
   background-color: #198754;
   color: #fff;
-  content: 'ON';
+  content: 'ENABLED';
   padding-left: 0.75em;
 }
 
 .slider-inner:after {
   background-color: #eee;
   color: #666;
-  content: 'OFF';
+  content: 'DISABLED';
   padding-right: 0.75em;
   text-align: right;
 }

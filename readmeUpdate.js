@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const challenges = [
   'https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements',
   'https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element',
@@ -190,70 +192,57 @@ const challenges = [
   'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids',
 ];
 
-function executeScript(script) {
-  chrome.tabs.executeScript({
-    code: '(' + script + ')();', //argument here is a string but function.toString() returns function's code
-  });
+function nameOfChallege(challenge) {
+  const challengeUrlName = challenge.split('/')[6];
+  const challengeName = challengeUrlName
+    .split('-')
+    .reduce(
+      (previousValue, currentValue) =>
+        previousValue +
+        ' ' +
+        currentValue.charAt(0).toUpperCase() +
+        currentValue.slice(1),
+      ''
+    );
+
+  return challengeName;
 }
 
-function clearHelpers() {
-  const title = document.querySelector('.challenge-title-breadcrumbs');
-  const description = document.querySelector('#description');
-  const helpButtons = document.querySelector('#get-help-dropdown');
-  const testCases = document.querySelector('.challenge-test-suite');
-  const output = document.getElementsByClassName('horizontal reflex-element');
+function sectionName(challenge) {
+  const sectionUrlName = challenge.split('/')[5];
+  const sectionName = sectionUrlName
+    .split('-')
+    .reduce(
+      (previousValue, currentValue) =>
+        previousValue +
+        ' ' +
+        currentValue.charAt(0).toUpperCase() +
+        currentValue.slice(1),
+      ''
+    );
 
-  title?.remove();
-  description?.remove();
-  helpButtons?.remove();
-  testCases?.remove();
-  output[2]?.remove();
+  return sectionName;
 }
 
-function isURLWhitelisted(url) {
-  if (!url) return false;
-
+(function populateDropdown() {
+  let string = "# Jasmin's Extension \n";
   for (let i = 0; i < challenges.length; i++) {
-    if (url.startsWith(challenges[i])) return true;
+    if (i == 0) {
+      const _sectionName = sectionName(challenges[i]);
+      string += `## ${_sectionName} \n`;
+    }
+    if (
+      i >= 1 &&
+      sectionName(challenges[i]).localeCompare(
+        sectionName(challenges[i - 1])
+      ) != 0
+    ) {
+      const _sectionName = sectionName(challenges[i]);
+      string += `## ${_sectionName} \n`;
+    }
+    const challengeName = nameOfChallege(challenges[i]);
+    string += `- [${challengeName}](${challenges[i]}) \n`;
   }
 
-  return false;
-}
-
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  chrome.storage.local.get('challengeIndex', function (items) {
-    chrome.storage.local.get('fccUtilityOn', function (_items) {
-      const switchOn = _items.fccUtilityOn;
-      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-        if (!switchOn) return;
-        if (isURLWhitelisted(tabs[0]?.url)) {
-          if (tabs[0]?.url.startsWith(challenges[items.challengeIndex]))
-            executeScript(clearHelpers);
-          else if (
-            tabs[0]?.url.startsWith(challenges[items.challengeIndex + 1])
-          ) {
-            executeScript(clearHelpers);
-            chrome.storage.local.set({
-              challengeIndex: items.challengeIndex + 1,
-            });
-          } else {
-            chrome.tabs.update({
-              url: challenges[items.challengeIndex],
-            });
-            executeScript(clearHelpers);
-          }
-        } else {
-          chrome.tabs.update({
-            url: challenges[items.challengeIndex],
-          });
-          executeScript(clearHelpers);
-        }
-      });
-    });
-  });
-});
-
-(function () {
-  chrome.storage.local.set({ challengeIndex: 0 });
-  chrome.storage.local.set({ fccUtilityOn: false });
+  fs.writeFileSync('test.md', string);
 })();
