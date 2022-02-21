@@ -16,11 +16,13 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - Feedback when challenge on FCC when tests fail :construction:
 - Progress tracking :construction:
 - Time tracking :construction:
+- Test mode :construction:
 
 # Free Code Camp challenges
 
 
 ##  Basic Html And Html5 
+
 - [ Say Hello To Html Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements) :white_check_mark:
 - [ Headline With The H2 Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element) :white_check_mark:
 - [ Inform With The Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/inform-with-the-paragraph-element) :white_check_mark:
@@ -49,52 +51,56 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Nest Many Elements Within A Single Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-many-elements-within-a-single-div-element) :white_check_mark:
 - [ Declare The Doctype Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/declare-the-doctype-of-an-html-document) :white_check_mark:
 - [ Define The Head And Body Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/define-the-head-and-body-of-an-html-document) :white_check_mark:
+- 
 ##  Basic Css 
-- [ Change The Color Of Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-color-of-text) 
-- [ Use Css Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-selectors-to-style-elements) 
-- [ Use A Css Class To Style An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-css-class-to-style-an-element) 
-- [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) 
-- [ Change The Font Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-font-size-of-an-element) 
-- [ Set The Font Family Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-font-family-of-an-element) 
-- [ Import A Google Font](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/import-a-google-font) 
-- [ Specify How Fonts Should Degrade](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/specify-how-fonts-should-degrade) 
-- [ Size Your Images](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/size-your-images) 
-- [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) 
-- [ Add Rounded Corners With Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-rounded-corners-with-border-radius) 
-- [ Make Circular Images With A Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/make-circular-images-with-a-border-radius) 
-- [ Give A Background Color To A Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/give-a-background-color-to-a-div-element) 
-- [ Set The Id Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-id-of-an-element) 
-- [ Use An Id Attribute To Style An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-an-id-attribute-to-style-an-element) 
-- [ Adjust The Padding Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/adjust-the-padding-of-an-element) 
-- [ Adjust The Margin Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/adjust-the-margin-of-an-element) 
-- [ Add A Negative Margin To An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-a-negative-margin-to-an-element) 
-- [ Add Different Padding To Each Side Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-different-padding-to-each-side-of-an-element) 
-- [ Add Different Margins To Each Side Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-different-margins-to-each-side-of-an-element) 
-- [ Use Clockwise Notation To Specify The Padding Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-padding-of-an-element) 
-- [ Use Clockwise Notation To Specify The Margin Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-margin-of-an-element) 
-- [ Use Attribute Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-attribute-selectors-to-style-elements) 
-- [ Understand Absolute Versus Relative Units](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/understand-absolute-versus-relative-units) 
-- [ Style The Html Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-the-html-body-element) 
-- [ Inherit Styles From The Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-styles-from-the-body-element) 
-- [ Prioritize One Style Over Another](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/prioritize-one-style-over-another) 
-- [ Override Styles In Subsequent Css](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-styles-in-subsequent-css) 
-- [ Override Class Declarations By Styling Id Attributes](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-by-styling-id-attributes) 
-- [ Override Class Declarations With Inline Styles](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-with-inline-styles) 
-- [ Override All Other Styles By Using Important](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-all-other-styles-by-using-important) 
-- [ Use Hex Code For Specific Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-for-specific-colors) 
-- [ Use Hex Code To Mix Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-to-mix-colors) 
-- [ Use Abbreviated Hex Code](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-abbreviated-hex-code) 
-- [ Use Rgb Values To Color Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-rgb-values-to-color-elements) 
-- [ Use Rgb To Mix Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-rgb-to-mix-colors) 
-- [ Use Css Variables To Change Several Elements At Once](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-variables-to-change-several-elements-at-once) 
-- [ Create A Custom Css Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/create-a-custom-css-variable) 
-- [ Use A Custom Css Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-custom-css-variable) 
-- [ Attach A Fallback Value To A Css Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/attach-a-fallback-value-to-a-css-variable) 
-- [ Improve Compatibility With Browser Fallbacks](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/improve-compatibility-with-browser-fallbacks) 
-- [ Inherit Css Variables](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-css-variables) 
-- [ Change A Variable For A Specific Area](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-a-variable-for-a-specific-area) 
-- [ Use A Media Query To Change A Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-media-query-to-change-a-variable) 
+
+- [ Change The Color Of Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-color-of-text) :white_check_mark:
+- [ Use Css Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-selectors-to-style-elements) :white_check_mark:
+- [ Use A Css Class To Style An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-css-class-to-style-an-element) :white_check_mark:
+- [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) :white_check_mark:
+- [ Change The Font Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-font-size-of-an-element) :white_check_mark:
+- [ Set The Font Family Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-font-family-of-an-element) :white_check_mark:
+- [ Import A Google Font](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/import-a-google-font) :construction:
+- [ Specify How Fonts Should Degrade](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/specify-how-fonts-should-degrade) :white_check_mark:
+- [ Size Your Images](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/size-your-images) :white_check_mark:
+- [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) :white_check_mark:
+- [ Add Rounded Corners With Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-rounded-corners-with-border-radius) :white_check_mark:
+- [ Make Circular Images With A Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/make-circular-images-with-a-border-radius) :white_check_mark:
+- [ Give A Background Color To A Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/give-a-background-color-to-a-div-element) :white_check_mark:
+- [ Set The Id Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-id-of-an-element) :white_check_mark:
+- [ Use An Id Attribute To Style An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-an-id-attribute-to-style-an-element) :white_check_mark:
+- [ Adjust The Padding Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/adjust-the-padding-of-an-element) :white_check_mark:
+- [ Adjust The Margin Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/adjust-the-margin-of-an-element) :white_check_mark:
+- [ Add A Negative Margin To An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-a-negative-margin-to-an-element) :white_check_mark:
+- [ Add Different Padding To Each Side Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-different-padding-to-each-side-of-an-element) :white_check_mark:
+- [ Add Different Margins To Each Side Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-different-margins-to-each-side-of-an-element) :white_check_mark:
+- [ Use Clockwise Notation To Specify The Padding Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-padding-of-an-element) :white_check_mark:
+- [ Use Clockwise Notation To Specify The Margin Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-margin-of-an-element) :white_check_mark:
+- [ Use Attribute Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-attribute-selectors-to-style-elements) :white_check_mark:
+- [ Understand Absolute Versus Relative Units](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/understand-absolute-versus-relative-units) :white_check_mark:
+- [ Style The Html Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-the-html-body-element) :construction:
+- [ Inherit Styles From The Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-styles-from-the-body-element) :white_check_mark:
+- [ Prioritize One Style Over Another](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/prioritize-one-style-over-another) :white_check_mark:
+- [ Override Styles In Subsequent Css](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-styles-in-subsequent-css) :construction:
+- [ Override Class Declarations By Styling Id Attributes](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-by-styling-id-attributes) :construction:
+- [ Override Class Declarations With Inline Styles](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-with-inline-styles) :construction:
+- [ Override All Other Styles By Using Important](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-all-other-styles-by-using-important) :construction:
+- [ Use Hex Code For Specific Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-for-specific-colors) :white_check_mark:
+- [ Use Hex Code To Mix Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-to-mix-colors) :white_check_mark:
+- [ Use Abbreviated Hex Code](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-abbreviated-hex-code) :white_check_mark:
+- [ Use Rgb Values To Color Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-rgb-values-to-color-elements) :white_check_mark:
+- [ Use Rgb To Mix Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-rgb-to-mix-colors) :white_check_mark:
+- [ Use Css Variables To Change Several Elements At Once](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-variables-to-change-several-elements-at-once) :white_check_mark:
+- [ Create A Custom Css Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/create-a-custom-css-variable) :white_check_mark:
+- [ Use A Custom Css Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-custom-css-variable) :white_check_mark:
+- [ Attach A Fallback Value To A Css Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/attach-a-fallback-value-to-a-css-variable) :white_check_mark:
+- [ Improve Compatibility With Browser Fallbacks](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/improve-compatibility-with-browser-fallbacks) :white_check_mark:
+- [ Inherit Css Variables](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-css-variables) :white_check_mark:
+- [ Change A Variable For A Specific Area](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-a-variable-for-a-specific-area) :white_check_mark:
+- [ Use A Media Query To Change A Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-media-query-to-change-a-variable) :white_check_mark:
+- 
 ##  Applied Visual Design 
+
 - [ Create Visual Balance Using The Text Align Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-balance-using-the-text-align-property) 
 - [ Adjust The Width Of An Element Using The Width Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-width-of-an-element-using-the-width-property) 
 - [ Adjust The Height Of An Element Using The Height Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-height-of-an-element-using-the-height-property) 
@@ -147,7 +153,9 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work) 
 - [ Use A Bezier Curve To Move A Graphic](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic) 
 - [ Make Motion More Natural Using A Bezier Curve](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve) 
+- 
 ##  Applied Accessibility 
+
 - [ Add A Text Alternative To Images For Visually Impaired Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility) 
 - [ Know When Alt Text Should Be Left Blank](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/know-when-alt-text-should-be-left-blank) 
 - [ Use Headings To Show Hierarchical Relationships Of Content](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-headings-to-show-hierarchical-relationships-of-content) 
