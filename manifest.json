@@ -9,9 +9,7 @@
     "512": "logo.png"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "description": "Extension for taking the Jasmin's test..",
   "manifest_version": 2,

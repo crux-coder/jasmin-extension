@@ -98,7 +98,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Inherit Css Variables](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-css-variables) :white_check_mark:
 - [ Change A Variable For A Specific Area](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-a-variable-for-a-specific-area) :white_check_mark:
 - [ Use A Media Query To Change A Variable](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-media-query-to-change-a-variable) :white_check_mark:
-- 
+  
 ##  Applied Visual Design 
 
 - [ Create Visual Balance Using The Text Align Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-balance-using-the-text-align-property) 
@@ -153,7 +153,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work) 
 - [ Use A Bezier Curve To Move A Graphic](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic) 
 - [ Make Motion More Natural Using A Bezier Curve](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve) 
-- 
+  
 ##  Applied Accessibility 
 
 - [ Add A Text Alternative To Images For Visually Impaired Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility) 
@@ -183,7 +183,9 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Make An Image Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-an-image-responsive) 
 - [ Use A Retina Image For Higher Resolution Displays](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/use-a-retina-image-for-higher-resolution-displays) 
 - [ Make Typography Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-typography-responsive) 
+  
 ##  Css Flexbox 
+
 - [ Use Display Flex To Position Two Boxes](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-display-flex-to-position-two-boxes) 
 - [ Add Flex Superpowers To The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/add-flex-superpowers-to-the-tweet-embed) 
 - [ Use The Flex Direction Property To Make A Row](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-row) 
@@ -201,7 +203,9 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Use The Flex Shorthand Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shorthand-property) 
 - [ Use The Order Property To Rearrange Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-order-property-to-rearrange-items) 
 - [ Use The Align Self Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-self-property) 
+  
 ##  Css Grid 
+
 - [ Create Your First Css Grid](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-your-first-css-grid) 
 - [ Add Columns With Grid Template Columns](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-columns-with-grid-template-columns) 
 - [ Add Rows With Grid Template Rows](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-rows-with-grid-template-rows) 
