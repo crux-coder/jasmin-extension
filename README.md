@@ -60,7 +60,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) :white_check_mark:
 - [ Change The Font Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-font-size-of-an-element) :white_check_mark:
 - [ Set The Font Family Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-font-family-of-an-element) :white_check_mark:
-- [ Import A Google Font](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/import-a-google-font) :construction:
+- [ Import A Google Font](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/import-a-google-font) :white_check_mark:
 - [ Specify How Fonts Should Degrade](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/specify-how-fonts-should-degrade) :white_check_mark:
 - [ Size Your Images](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/size-your-images) :white_check_mark:
 - [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) :white_check_mark:
