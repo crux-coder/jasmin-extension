@@ -1,3 +1,5 @@
-# Jasmin's Extension
+# Free code camp challenges
 
-## Good luck! :)
+## Basic HTML and HTML5
+
+- Say Hello to HTML Elements :heavy_check_mark:
