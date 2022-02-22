@@ -25,7 +25,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 
 - [ Say Hello To Html Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements) :white_check_mark:
 - [ Headline With The H2 Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element) :white_check_mark:
-- [ Inform With The Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/inform-with-the-paragraph-element) :white_check_mark:
+- [ Inform With The Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/inform-with-the-paragraph-element) :construction:
 - [ Fill In The Blank With Placeholder Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/fill-in-the-blank-with-placeholder-text) :white_check_mark:
 - [ Uncomment Html](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/uncomment-html) :white_check_mark:
 - [ Comment Out Html](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/comment-out-html) :white_check_mark:
@@ -35,7 +35,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Link To External Pages With Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-external-pages-with-anchor-elements) :white_check_mark: 
 - [ Link To Internal Sections Of A Page With Anchor Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/link-to-internal-sections-of-a-page-with-anchor-elements) :white_check_mark:
 - [ Nest An Anchor Element Within A Paragraph](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-an-anchor-element-within-a-paragraph) :white_check_mark:
-- [ Make Dead Links Using The Hash Symbol](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/make-dead-links-using-the-hash-symbol) :white_check_mark:
+- [ Make Dead Links Using The Hash Symbol](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/make-dead-links-using-the-hash-symbol) :construction:
 - [ Turn An Image Into A Link](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/turn-an-image-into-a-link) :white_check_mark:
 - [ Create A Bulleted Unordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-bulleted-unordered-list) :white_check_mark:
 - [ Create An Ordered List](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-an-ordered-list) :white_check_mark:
@@ -48,7 +48,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Create A Set Of Checkboxes](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/create-a-set-of-checkboxes) :white_check_mark:
 - [ Use The Value Attribute With Radio Buttons And Checkboxes](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/use-the-value-attribute-with-radio-buttons-and-checkboxes) :white_check_mark:
 - [ Check Radio Buttons And Checkboxes By Default](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/check-radio-buttons-and-checkboxes-by-default) :white_check_mark:
-- [ Nest Many Elements Within A Single Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-many-elements-within-a-single-div-element) :white_check_mark:
+- [ Nest Many Elements Within A Single Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/nest-many-elements-within-a-single-div-element) :construction:
 - [ Declare The Doctype Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/declare-the-doctype-of-an-html-document) :white_check_mark:
 - [ Define The Head And Body Of An Html Document](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/define-the-head-and-body-of-an-html-document) :white_check_mark:
 - 
@@ -57,14 +57,14 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Change The Color Of Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-color-of-text) :white_check_mark:
 - [ Use Css Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-selectors-to-style-elements) :white_check_mark:
 - [ Use A Css Class To Style An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-css-class-to-style-an-element) :white_check_mark:
-- [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) :white_check_mark:
+- [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) :construction:
 - [ Change The Font Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-font-size-of-an-element) :white_check_mark:
 - [ Set The Font Family Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-font-family-of-an-element) :white_check_mark:
 - [ Import A Google Font](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/import-a-google-font) :white_check_mark:
 - [ Specify How Fonts Should Degrade](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/specify-how-fonts-should-degrade) :white_check_mark:
 - [ Size Your Images](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/size-your-images) :white_check_mark:
-- [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) :white_check_mark:
-- [ Add Rounded Corners With Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-rounded-corners-with-border-radius) :white_check_mark:
+- [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) :construction:
+- [ Add Rounded Corners With Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-rounded-corners-with-border-radius) :construction:
 - [ Make Circular Images With A Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/make-circular-images-with-a-border-radius) :white_check_mark:
 - [ Give A Background Color To A Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/give-a-background-color-to-a-div-element) :white_check_mark:
 - [ Set The Id Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-id-of-an-element) :white_check_mark:
@@ -109,9 +109,9 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Use The Em Tag To Italicize Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-em-tag-to-italicize-text) 
 - [ Use The S Tag To Strikethrough Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-s-tag-to-strikethrough-text) 
 - [ Create A Horizontal Line Using The Hr Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-horizontal-line-using-the-hr-element) 
-- [ Adjust The Background Color Property Of Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-background-color-property-of-text) 
+- [ Adjust The Background Color Property Of Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-background-color-property-of-text) :construction:
 - [ Adjust The Size Of A Heading Element Versus A Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-size-of-a-heading-element-versus-a-paragraph-element) 
-- [ Add A Box Shadow To A Card Like Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/add-a-box-shadow-to-a-card-like-element) 
+- [ Add A Box Shadow To A Card Like Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/add-a-box-shadow-to-a-card-like-element) :construction:
 - [ Decrease The Opacity Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/decrease-the-opacity-of-an-element) 
 - [ Use The Text Transform Property To Make Text Uppercase](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-text-transform-property-to-make-text-uppercase) 
 - [ Set The Font Size For Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-for-multiple-heading-elements) 
@@ -126,10 +126,10 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Push Elements Left Or Right With The Float Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/push-elements-left-or-right-with-the-float-property) 
 - [ Change The Position Of Overlapping Elements With The Z Index Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-the-position-of-overlapping-elements-with-the-z-index-property) 
 - [ Center An Element Horizontally Using The Margin Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/center-an-element-horizontally-using-the-margin-property) 
-- [ Learn About Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-complementary-colors) 
-- [ Learn About Tertiary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-tertiary-colors) 
+- [ Learn About Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-complementary-colors) :construction:
+- [ Learn About Tertiary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-tertiary-colors) :construction:
 - [ Adjust The Color Of Various Elements To Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-color-of-various-elements-to-complementary-colors) 
-- [ Adjust The Hue Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hue-of-a-color) 
+- [ Adjust The Hue Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hue-of-a-color) :construction:
 - [ Adjust The Tone Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-tone-of-a-color) 
 - [ Create A Gradual Css Linear Gradient](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-gradual-css-linear-gradient) 
 - [ Use A Css Linear Gradient To Create A Striped Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element) 
@@ -150,7 +150,7 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Animate Elements At Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-at-variable-rates) 
 - [ Animate Multiple Elements At Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-multiple-elements-at-variable-rates) 
 - [ Change Animation Timing With Keywords](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-animation-timing-with-keywords) 
-- [ Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work) 
+- [ Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work) :construction:
 - [ Use A Bezier Curve To Move A Graphic](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic) 
 - [ Make Motion More Natural Using A Bezier Curve](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve) 
   
