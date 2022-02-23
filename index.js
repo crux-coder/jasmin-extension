@@ -192,7 +192,6 @@ const challenges = [
 const startTestButton = document.getElementById('startTest');
 const resetButton = document.getElementById('resetProgress');
 const onOffSwitch = document.getElementById('sliderSwitch');
-const goToUrlButton = document.getElementById('go-btn');
 const challengeSelect = document.getElementById('challenge-select');
 
 challengeSelect.addEventListener('change', function () {
@@ -226,7 +225,7 @@ startTestButton.addEventListener('click', function (e) {
   onOffSwitch.checked = true;
   chrome.storage.local.set({ fccUtilityOn: true });
   chrome.tabs.update({
-    url: 'https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/say-hello-to-html-elements',
+    url: challenges[0],
   });
 });
 
