@@ -4,6 +4,7 @@ const CONSTANTS = {
   GET_HELP_BUTTON: 'GET_HELP_BUTTON',
   TEST_CASES: 'TEST_CASES',
   TEST_OUTPUT: 'TEST_OUTPUT',
+  ALL_HELPERS: 'ALL_HELPERS',
 };
 
 const responsiveWebDesignChallenges = [
