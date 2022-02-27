@@ -57,14 +57,14 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Change The Color Of Text](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-color-of-text) :white_check_mark:
 - [ Use Css Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-css-selectors-to-style-elements) :white_check_mark:
 - [ Use A Css Class To Style An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-a-css-class-to-style-an-element) :white_check_mark:
-- [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) :construction:
+- [ Style Multiple Elements With A Css Class](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class) :white_check_mark:
 - [ Change The Font Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/change-the-font-size-of-an-element) :white_check_mark:
 - [ Set The Font Family Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-font-family-of-an-element) :white_check_mark:
 - [ Import A Google Font](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/import-a-google-font) :white_check_mark:
 - [ Specify How Fonts Should Degrade](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/specify-how-fonts-should-degrade) :white_check_mark:
 - [ Size Your Images](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/size-your-images) :white_check_mark:
-- [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) :construction:
-- [ Add Rounded Corners With Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-rounded-corners-with-border-radius) :construction:
+- [ Add Borders Around Your Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-borders-around-your-elements) :white_check_mark:
+- [ Add Rounded Corners With Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/add-rounded-corners-with-border-radius) :white_check_mark:
 - [ Make Circular Images With A Border Radius](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/make-circular-images-with-a-border-radius) :white_check_mark:
 - [ Give A Background Color To A Div Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/give-a-background-color-to-a-div-element) :white_check_mark:
 - [ Set The Id Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/set-the-id-of-an-element) :white_check_mark:
@@ -78,13 +78,13 @@ This extension will hide all the help on the Free Code Camp website so you can f
 - [ Use Clockwise Notation To Specify The Margin Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-clockwise-notation-to-specify-the-margin-of-an-element) :white_check_mark:
 - [ Use Attribute Selectors To Style Elements](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-attribute-selectors-to-style-elements) :white_check_mark:
 - [ Understand Absolute Versus Relative Units](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/understand-absolute-versus-relative-units) :white_check_mark:
-- [ Style The Html Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-the-html-body-element) :construction:
+- [ Style The Html Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/style-the-html-body-element) :white_check_mark:
 - [ Inherit Styles From The Body Element](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/inherit-styles-from-the-body-element) :white_check_mark:
 - [ Prioritize One Style Over Another](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/prioritize-one-style-over-another) :white_check_mark:
-- [ Override Styles In Subsequent Css](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-styles-in-subsequent-css) :construction:
-- [ Override Class Declarations By Styling Id Attributes](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-by-styling-id-attributes) :construction:
-- [ Override Class Declarations With Inline Styles](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-with-inline-styles) :construction:
-- [ Override All Other Styles By Using Important](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-all-other-styles-by-using-important) :construction:
+- [ Override Styles In Subsequent Css](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-styles-in-subsequent-css) :white_check_mark:
+- [ Override Class Declarations By Styling Id Attributes](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-by-styling-id-attributes) :white_check_mark:
+- [ Override Class Declarations With Inline Styles](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-class-declarations-with-inline-styles) :white_check_mark:
+- [ Override All Other Styles By Using Important](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/override-all-other-styles-by-using-important) :white_check_mark:
 - [ Use Hex Code For Specific Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-for-specific-colors) :white_check_mark:
 - [ Use Hex Code To Mix Colors](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-hex-code-to-mix-colors) :white_check_mark:
 - [ Use Abbreviated Hex Code](https://www.freecodecamp.org/learn/responsive-web-design/basic-css/use-abbreviated-hex-code) :white_check_mark:
