@@ -101,60 +101,60 @@ This extension will hide all the help on the Free Code Camp website so you can f
 
 ## Applied Visual Design
 
-- [ Create Visual Balance Using The Text Align Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-balance-using-the-text-align-property)
-- [ Adjust The Width Of An Element Using The Width Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-width-of-an-element-using-the-width-property)
-- [ Adjust The Height Of An Element Using The Height Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-height-of-an-element-using-the-height-property)
-- [ Use The Strong Tag To Make Text Bold](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-strong-tag-to-make-text-bold)
-- [ Use The U Tag To Underline Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-u-tag-to-underline-text)
-- [ Use The Em Tag To Italicize Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-em-tag-to-italicize-text)
-- [ Use The S Tag To Strikethrough Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-s-tag-to-strikethrough-text)
-- [ Create A Horizontal Line Using The Hr Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-horizontal-line-using-the-hr-element)
-- [ Adjust The Background Color Property Of Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-background-color-property-of-text) :construction:
-- [ Adjust The Size Of A Heading Element Versus A Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-size-of-a-heading-element-versus-a-paragraph-element)
-- [ Add A Box Shadow To A Card Like Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/add-a-box-shadow-to-a-card-like-element) :construction:
-- [ Decrease The Opacity Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/decrease-the-opacity-of-an-element)
-- [ Use The Text Transform Property To Make Text Uppercase](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-text-transform-property-to-make-text-uppercase)
-- [ Set The Font Size For Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-for-multiple-heading-elements)
-- [ Set The Font Weight For Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-weight-for-multiple-heading-elements)
-- [ Set The Font Size Of Paragraph Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-of-paragraph-text)
-- [ Set The Line Height Of Paragraphs](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-line-height-of-paragraphs)
-- [ Adjust The Hover State Of An Anchor Tag](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hover-state-of-an-anchor-tag)
-- [ Change An Elements Relative Position](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-an-elements-relative-position)
-- [ Move A Relatively Positioned Element With Css Offsets](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/move-a-relatively-positioned-element-with-css-offsets)
-- [ Lock An Element To Its Parent With Absolute Positioning](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-its-parent-with-absolute-positioning)
-- [ Lock An Element To The Browser Window With Fixed Positioning](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-the-browser-window-with-fixed-positioning)
-- [ Push Elements Left Or Right With The Float Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/push-elements-left-or-right-with-the-float-property)
-- [ Change The Position Of Overlapping Elements With The Z Index Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-the-position-of-overlapping-elements-with-the-z-index-property)
-- [ Center An Element Horizontally Using The Margin Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/center-an-element-horizontally-using-the-margin-property)
-- [ Learn About Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-complementary-colors) :construction:
-- [ Learn About Tertiary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-tertiary-colors) :construction:
-- [ Adjust The Color Of Various Elements To Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-color-of-various-elements-to-complementary-colors)
-- [ Adjust The Hue Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hue-of-a-color) :construction:
-- [ Adjust The Tone Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-tone-of-a-color)
-- [ Create A Gradual Css Linear Gradient](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-gradual-css-linear-gradient)
-- [ Use A Css Linear Gradient To Create A Striped Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element)
-- [ Create Texture By Adding A Subtle Pattern As A Background Image](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-texture-by-adding-a-subtle-pattern-as-a-background-image)
-- [ Use The Css Transform Scale Property To Change The Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-change-the-size-of-an-element)
-- [ Use The Css Transform Scale Property To Scale An Element On Hover](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-scale-an-element-on-hover)
-- [ Use The Css Transform Property Skewx To Skew An Element Along The X Axis](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-axis)
-- [ Use The Css Transform Property Skewy To Skew An Element Along The Y Axis](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-axis)
-- [ Create A Graphic Using Css](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-graphic-using-css)
-- [ Create A More Complex Shape Using Css And Html](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-more-complex-shape-using-css-and-html)
-- [ Learn How The Css Keyframes And Animation Properties Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-the-css-keyframes-and-animation-properties-work)
-- [ Use Css Animation To Change The Hover State Of A Button](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-css-animation-to-change-the-hover-state-of-a-button)
-- [ Modify Fill Mode Of An Animation](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/modify-fill-mode-of-an-animation)
-- [ Create Movement Using Css Animation](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-movement-using-css-animation)
-- [ Create Visual Direction By Fading An Element From Left To Right](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-direction-by-fading-an-element-from-left-to-right)
-- [ Animate Elements Continually Using An Infinite Animation Count](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-continually-using-an-infinite-animation-count)
-- [ Make A Css Heartbeat Using An Infinite Animation Count](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-a-css-heartbeat-using-an-infinite-animation-count)
-- [ Animate Elements At Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-at-variable-rates)
-- [ Animate Multiple Elements At Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-multiple-elements-at-variable-rates)
-- [ Change Animation Timing With Keywords](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-animation-timing-with-keywords)
-- [ Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work) :construction:
-- [ Use A Bezier Curve To Move A Graphic](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic)
-- [ Make Motion More Natural Using A Bezier Curve](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve)
+- [ Create Visual Balance Using The Text Align Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-balance-using-the-text-align-property) :white_check_mark:
+- [ Adjust The Width Of An Element Using The Width Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-width-of-an-element-using-the-width-property) :white_check_mark:
+- [ Adjust The Height Of An Element Using The Height Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-height-of-an-element-using-the-height-property) :white_check_mark:
+- [ Use The Strong Tag To Make Text Bold](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-strong-tag-to-make-text-bold) :white_check_mark:
+- [ Use The U Tag To Underline Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-u-tag-to-underline-text) :white_check_mark:
+- [ Use The Em Tag To Italicize Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-em-tag-to-italicize-text) :white_check_mark:
+- [ Use The S Tag To Strikethrough Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-s-tag-to-strikethrough-text) :white_check_mark:
+- [ Create A Horizontal Line Using The Hr Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-horizontal-line-using-the-hr-element) :white_check_mark:
+- [ Adjust The Background Color Property Of Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-background-color-property-of-text) :white_check_mark:
+- [ Adjust The Size Of A Heading Element Versus A Paragraph Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-size-of-a-heading-element-versus-a-paragraph-element) :white_check_mark:
+- [ Add A Box Shadow To A Card Like Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/add-a-box-shadow-to-a-card-like-element) :white_check_mark:
+- [ Decrease The Opacity Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/decrease-the-opacity-of-an-element) :white_check_mark:
+- [ Use The Text Transform Property To Make Text Uppercase](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-text-transform-property-to-make-text-uppercase) :white_check_mark:
+- [ Set The Font Size For Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-for-multiple-heading-elements) :white_check_mark:
+- [ Set The Font Weight For Multiple Heading Elements](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-weight-for-multiple-heading-elements) :white_check_mark:
+- [ Set The Font Size Of Paragraph Text](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-of-paragraph-text) :white_check_mark:
+- [ Set The Line Height Of Paragraphs](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-line-height-of-paragraphs) :white_check_mark:
+- [ Adjust The Hover State Of An Anchor Tag](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hover-state-of-an-anchor-tag) :white_check_mark:
+- [ Change An Elements Relative Position](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-an-elements-relative-position) :white_check_mark:
+- [ Move A Relatively Positioned Element With Css Offsets](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/move-a-relatively-positioned-element-with-css-offsets) :white_check_mark:
+- [ Lock An Element To Its Parent With Absolute Positioning](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-its-parent-with-absolute-positioning) :white_check_mark:
+- [ Lock An Element To The Browser Window With Fixed Positioning](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-the-browser-window-with-fixed-positioning) :white_check_mark:
+- [ Push Elements Left Or Right With The Float Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/push-elements-left-or-right-with-the-float-property) :white_check_mark:
+- [ Change The Position Of Overlapping Elements With The Z Index Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-the-position-of-overlapping-elements-with-the-z-index-property) :white_check_mark:
+- [ Center An Element Horizontally Using The Margin Property](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/center-an-element-horizontally-using-the-margin-property) :white_check_mark:
+- [ Learn About Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-complementary-colors) :white_check_mark:
+- [ Learn About Tertiary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-tertiary-colors) :white_check_mark:
+- [ Adjust The Color Of Various Elements To Complementary Colors](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-color-of-various-elements-to-complementary-colors) :white_check_mark:
+- [ Adjust The Hue Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hue-of-a-color) :white_check_mark:
+- [ Adjust The Tone Of A Color](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-tone-of-a-color) :white_check_mark:
+- [ Create A Gradual Css Linear Gradient](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-gradual-css-linear-gradient) :white_check_mark:
+- [ Use A Css Linear Gradient To Create A Striped Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element) :white_check_mark:
+- [ Create Texture By Adding A Subtle Pattern As A Background Image](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-texture-by-adding-a-subtle-pattern-as-a-background-image) :white_check_mark:
+- [ Use The Css Transform Scale Property To Change The Size Of An Element](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-change-the-size-of-an-element) :white_check_mark:
+- [ Use The Css Transform Scale Property To Scale An Element On Hover](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-scale-an-element-on-hover) :white_check_mark:
+- [ Use The Css Transform Property Skewx To Skew An Element Along The X Axis](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-axis) :white_check_mark:
+- [ Use The Css Transform Property Skewy To Skew An Element Along The Y Axis](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-axis) :white_check_mark:
+- [ Create A Graphic Using Css](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-graphic-using-css) :white_check_mark:
+- [ Create A More Complex Shape Using Css And Html](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-more-complex-shape-using-css-and-html) :white_check_mark:
+- [ Learn How The Css Keyframes And Animation Properties Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-the-css-keyframes-and-animation-properties-work) :white_check_mark:
+- [ Use Css Animation To Change The Hover State Of A Button](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-css-animation-to-change-the-hover-state-of-a-button) :white_check_mark:
+- [ Modify Fill Mode Of An Animation](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/modify-fill-mode-of-an-animation) :white_check_mark:
+- [ Create Movement Using Css Animation](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-movement-using-css-animation) :white_check_mark:
+- [ Create Visual Direction By Fading An Element From Left To Right](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-direction-by-fading-an-element-from-left-to-right) :white_check_mark:
+- [ Animate Elements Continually Using An Infinite Animation Count](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-continually-using-an-infinite-animation-count) :white_check_mark:
+- [ Make A Css Heartbeat Using An Infinite Animation Count](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-a-css-heartbeat-using-an-infinite-animation-count) :white_check_mark:
+- [ Animate Elements At Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-at-variable-rates) :white_check_mark:
+- [ Animate Multiple Elements At Variable Rates](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-multiple-elements-at-variable-rates) :white_check_mark:
+- [ Change Animation Timing With Keywords](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-animation-timing-with-keywords) :white_check_mark:
+- [ Learn How Bezier Curves Work](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work) :white_check_mark:
+- [ Use A Bezier Curve To Move A Graphic](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic) :white_check_mark:
+- [ Make Motion More Natural Using A Bezier Curve](https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve) :white_check_mark:
 
-## Applied Accessibility
+## Applied Accessibility :construction:
 
 - [ Add A Text Alternative To Images For Visually Impaired Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility)
 - [ Know When Alt Text Should Be Left Blank](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/know-when-alt-text-should-be-left-blank)
@@ -181,10 +181,10 @@ This extension will hide all the help on the Free Code Camp website so you can f
 
 ## Responsive Web Design Principles
 
-- [ Create A Media Query](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query)
-- [ Make An Image Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-an-image-responsive)
-- [ Use A Retina Image For Higher Resolution Displays](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/use-a-retina-image-for-higher-resolution-displays)
-- [ Make Typography Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-typography-responsive)
+- [ Create A Media Query](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query) :white_check_mark:
+- [ Make An Image Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-an-image-responsive) :white_check_mark:
+- [ Use A Retina Image For Higher Resolution Displays](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/use-a-retina-image-for-higher-resolution-displays) :white_check_mark:
+- [ Make Typography Responsive](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-typography-responsive) :white_check_mark:
 
 ## Css Flexbox
 
