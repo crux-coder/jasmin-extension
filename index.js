@@ -206,10 +206,12 @@ challengeSelect.addEventListener('change', function () {
 
 resetButton.addEventListener('click', function () {
   chrome.storage.local.set({ challengeIndex: 0 });
+  chrome.storage.local.set({ fccUtilityOn: true });
   chrome.tabs.update({
     url: challenges[0],
   });
   challengeSelect.value = challenges[0];
+  onOffSwitch.checked = true;
 });
 
 onOffSwitch.addEventListener('change', function () {
@@ -291,9 +293,15 @@ function populateDropdown() {
   // Last section
   select.appendChild(section);
 }
-
+const baseURL = 'https://www.freecodecamp.org/learn/responsive-web-design';
 (function () {
   let _onOffSwitch = document.getElementById('sliderSwitch');
+  const goToFCCButton = document.getElementById('startTest');
+  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+    if (tabs[0]?.url.startsWith(baseURL)) {
+      goToFCCButton.disabled = true;
+    }
+  });
   chrome.storage.local.get('fccUtilityOn', function (items) {
     _onOffSwitch.checked = items.fccUtilityOn || false;
   });
