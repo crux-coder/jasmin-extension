@@ -1,13 +1,73 @@
-const CONSTANTS = {
-  BREADCRUMB_TITLE: 'BREADCRUMB_TITLE',
-  DESCRIPTION: 'DESCRIPTION',
-  GET_HELP_BUTTON: 'GET_HELP_BUTTON',
-  TEST_CASES: 'TEST_CASES',
-  TEST_OUTPUT: 'TEST_OUTPUT',
-  ALL_HELPERS: 'ALL_HELPERS',
-};
+function isCurrentURLWhitelisted(RESPONSIVE_WEB_DESIGN_CHALLNEGES, url) {
+  if (!url) return false;
 
-const responsiveWebDesignChallenges = [
+  for (let i = 0; i < RESPONSIVE_WEB_DESIGN_CHALLNEGES.length; i++) {
+    if (url.startsWith(RESPONSIVE_WEB_DESIGN_CHALLNEGES[i].url)) return true;
+  }
+
+  return false;
+}
+
+// function executeClearScript(tab) {
+//   chrome.scripting.executeScript({
+//     target: { tabId: tab.id },
+//     files: ['content.js'],
+//   });
+// }
+
+function isOnAppliedAccesibilitySection(tab) {
+  const APPLIED_ACCESSIBILITY_URL =
+    'https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility';
+
+  return tab.url.startsWith(APPLIED_ACCESSIBILITY_URL);
+}
+
+function skipAppliedAccesibilitySection() {
+  const RESPONSIVE_WEB_DESIGN_PRINCIPLES_URL =
+    'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query';
+  const RESPONSIVE_WEB_DESIGN_PRINCIPLES_INDEX = 124;
+  chrome.storage.local.set(
+    { CHALLENGE_INDEX: RESPONSIVE_WEB_DESIGN_PRINCIPLES_INDEX },
+    () => {
+      chrome.tabs.update({
+        url: RESPONSIVE_WEB_DESIGN_PRINCIPLES_URL,
+      });
+    }
+  );
+}
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  chrome.storage.local.get(
+    [
+      'CHALLENGE_INDEX',
+      'FCC_UTILITY_ENABLED',
+      'RESPONSIVE_WEB_DESIGN_CHALLNEGES',
+    ],
+    function (items) {
+      const {
+        CHALLENGE_INDEX,
+        FCC_UTILITY_ENABLED,
+        RESPONSIVE_WEB_DESIGN_CHALLNEGES,
+      } = items;
+      if (!FCC_UTILITY_ENABLED) return;
+      if (isOnAppliedAccesibilitySection(tab)) skipAppliedAccesibilitySection();
+      if (
+        !isCurrentURLWhitelisted(RESPONSIVE_WEB_DESIGN_CHALLNEGES, tab.url) ||
+        !tab.url.startsWith(
+          RESPONSIVE_WEB_DESIGN_CHALLNEGES[CHALLENGE_INDEX].url
+        )
+      ) {
+        chrome.tabs.update({
+          url: RESPONSIVE_WEB_DESIGN_CHALLNEGES[CHALLENGE_INDEX].url,
+        });
+      }
+
+      chrome.tabs.sendMessage(tabId, { command: 'CLEAR_HELPERS' });
+    }
+  );
+});
+
+const RESPONSIVE_WEB_DESIGN_CHALLNEGES = [
   {
     section: 'Basic Html And Html5',
     name: 'Say Hello To Html Elements',
@@ -662,8 +722,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Visual Balance Using The Text Align Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-balance-using-the-text-align-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Align the <code>h4</code> tag\'s text, which says "Google", to the center. Then justify the paragraph tag which contains information about how Google was founded.</p>\n',
   },
@@ -672,8 +731,7 @@ const responsiveWebDesignChallenges = [
     name: 'Adjust The Width Of An Element Using The Width Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-width-of-an-element-using-the-width-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add a <code>width</code> property to the entire card and set it to an absolute value of 245px. Use the <code>fullCard</code> class to select the element.</p>\n',
   },
@@ -682,8 +740,7 @@ const responsiveWebDesignChallenges = [
     name: 'Adjust The Height Of An Element Using The Height Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-height-of-an-element-using-the-height-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add a <code>height</code> property to the <code>h4</code> tag and set it to 25px.</p>\n<p><strong>Note:</strong> You may need to be at 100% zoom to pass the test on this challenge.</p>\n',
   },
@@ -692,8 +749,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Strong Tag To Make Text Bold',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-strong-tag-to-make-text-bold',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Wrap a <code>strong</code> tag around the text <code>Stanford University</code> inside the <code>p</code> tag (do not include the period).</p>\n',
   },
@@ -702,8 +758,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The U Tag To Underline Text',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-u-tag-to-underline-text',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Wrap the <code>u</code> tag only around the text <code>Ph.D. students</code>.</p>\n<p><strong>Note:</strong> Try to avoid using the <code>u</code> tag when it could be confused for a link. Anchor tags also have a default underlined formatting.</p>\n',
   },
@@ -712,8 +767,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Em Tag To Italicize Text',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-em-tag-to-italicize-text',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Wrap an <code>em</code> tag around the contents of the paragraph tag to give it emphasis.</p>\n',
   },
@@ -722,8 +776,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The S Tag To Strikethrough Text',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-s-tag-to-strikethrough-text',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Wrap the <code>s</code> tag around <code>Google</code> inside the <code>h4</code> tag and then add the word <code>Alphabet</code> beside it without the strikethrough formatting.</p>\n',
   },
@@ -732,8 +785,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A Horizontal Line Using The Hr Element',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-horizontal-line-using-the-hr-element',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add an <code>hr</code> tag underneath the <code>h4</code> which contains the card title.</p>\n<p><strong>Note:</strong> In HTML, <code>hr</code> is a self-closing tag, and therefore doesn't need a separate closing tag.</p>\n",
   },
@@ -752,8 +804,7 @@ const responsiveWebDesignChallenges = [
     name: 'Adjust The Size Of A Heading Element Versus A Paragraph Element',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-size-of-a-heading-element-versus-a-paragraph-element',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>To make the heading significantly larger than the paragraph, change the <code>font-size</code> of the <code>h4</code> element to 27 pixels.</p>\n',
   },
@@ -772,8 +823,7 @@ const responsiveWebDesignChallenges = [
     name: 'Decrease The Opacity Of An Element',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/decrease-the-opacity-of-an-element',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Set the <code>opacity</code> of the anchor tags to 0.7 using <code>links</code> class to select them.</p>\n',
   },
@@ -782,8 +832,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Text Transform Property To Make Text Uppercase',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-text-transform-property-to-make-text-uppercase',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Transform the text of the <code>h4</code> to be uppercase using the <code>text-transform</code> property.</p>\n',
   },
@@ -792,8 +841,7 @@ const responsiveWebDesignChallenges = [
     name: 'Set The Font Size For Multiple Heading Elements',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-for-multiple-heading-elements',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n  <p>In the <code>style</code> tags, set the <code>font-size</code> of the:</p>\n  <ul>\n    <li><code>h1</code> tag to 68px.</li>\n    <li><code>h2</code> tag to 52px.</li>\n    <li><code>h3</code> tag to 40px.</li>\n    <li><code>h4</code> tag to 32px.</li>\n    <li><code>h5</code> tag to 21px.</li>\n    <li><code>h6</code> tag to 14px.</li>\n  </ul>\n',
   },
@@ -802,8 +850,7 @@ const responsiveWebDesignChallenges = [
     name: 'Set The Font Weight For Multiple Heading Elements',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-weight-for-multiple-heading-elements',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<ul><li>Set the <code>font-weight</code> of the <code>h1</code> tag to 800.</li><li>Set the <code>font-weight</code> of the <code>h2</code> tag to 600.</li><li>Set the <code>font-weight</code> of the <code>h3</code> tag to 500.</li><li>Set the <code>font-weight</code> of the <code>h4</code> tag to 400.</li><li>Set the <code>font-weight</code> of the <code>h5</code> tag to 300.</li><li>Set the <code>font-weight</code> of the <code>h6</code> tag to 200.</li></ul>\n',
   },
@@ -812,8 +859,7 @@ const responsiveWebDesignChallenges = [
     name: 'Set The Font Size Of Paragraph Text',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-size-of-paragraph-text',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Change the value of the <code>font-size</code> property for the paragraph to 16px to make it more visible.</p>\n',
   },
@@ -822,8 +868,7 @@ const responsiveWebDesignChallenges = [
     name: 'Set The Line Height Of Paragraphs',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-line-height-of-paragraphs',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add a <code>line-height</code> property to the <code>p</code> tag and set it to 25px.</p>\n',
   },
@@ -832,8 +877,7 @@ const responsiveWebDesignChallenges = [
     name: 'Adjust The Hover State Of An Anchor Tag',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-hover-state-of-an-anchor-tag',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>The code editor has a CSS rule to style all <code>a</code> tags black. Add a rule so that when the user hovers over the <code>a</code> tag, the <code>color</code> is blue.</p>\n',
   },
@@ -842,8 +886,7 @@ const responsiveWebDesignChallenges = [
     name: 'Change An Elements Relative Position',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-an-elements-relative-position',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Change the <code>position</code> of the <code>h2</code> to <code>relative</code>, and use a CSS offset to move it 15 pixels away from the <code>top</code> of where it sits in the normal flow. Notice there is no impact on the positions of the surrounding h1 and p elements.</p>\n',
   },
@@ -852,8 +895,7 @@ const responsiveWebDesignChallenges = [
     name: 'Move A Relatively Positioned Element With Css Offsets',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/move-a-relatively-positioned-element-with-css-offsets',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Use CSS offsets to move the <code>h2</code> 15 pixels to the right and 10 pixels up.</p>\n',
   },
@@ -862,8 +904,7 @@ const responsiveWebDesignChallenges = [
     name: 'Lock An Element To Its Parent With Absolute Positioning',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-its-parent-with-absolute-positioning',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Lock the <code>#searchbar</code> element to the top-right of its <code>section</code> parent by declaring its <code>position</code> as <code>absolute</code>. Give it <code>top</code> and <code>right</code> offsets of 50 pixels each.</p>\n',
   },
@@ -872,8 +913,7 @@ const responsiveWebDesignChallenges = [
     name: 'Lock An Element To The Browser Window With Fixed Positioning',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-the-browser-window-with-fixed-positioning',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>The navigation bar in the code is labeled with an id of <code>navbar</code>. Change its <code>position</code> to <code>fixed</code>, and offset it 0 pixels from the <code>top</code> and 0 pixels from the <code>left</code>. After you have added the code, scroll the preview window to see how the navigation stays in place.</p>\n',
   },
@@ -882,8 +922,7 @@ const responsiveWebDesignChallenges = [
     name: 'Push Elements Left Or Right With The Float Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/push-elements-left-or-right-with-the-float-property',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>The given markup would work well as a two-column layout, with the <code>section</code> and <code>aside</code> elements next to each other. Give the <code>#left</code> item a <code>float</code> of <code>left</code> and the <code>#right</code> item a <code>float</code> of <code>right</code>.</p>\n',
   },
@@ -892,8 +931,7 @@ const responsiveWebDesignChallenges = [
     name: 'Change The Position Of Overlapping Elements With The Z Index Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-the-position-of-overlapping-elements-with-the-z-index-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add a <code>z-index</code> property to the element with the class name of <code>first</code> (the red rectangle) and set it to a value of 2 so it covers the other element (blue rectangle).</p>\n',
   },
@@ -902,8 +940,7 @@ const responsiveWebDesignChallenges = [
     name: 'Center An Element Horizontally Using The Margin Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/center-an-element-horizontally-using-the-margin-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Center the <code>div</code> on the page by adding a <code>margin</code> property with a value of <code>auto</code>.</p>\n',
   },
@@ -932,8 +969,7 @@ const responsiveWebDesignChallenges = [
     name: 'Adjust The Color Of Various Elements To Complementary Colors',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-color-of-various-elements-to-complementary-colors',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>This page will use a shade of teal (<code>#09A7A1</code>) as the dominant color, and its orange (<code>#FF790E</code>) complement to visually highlight the sign-up buttons. Change the <code>background-color</code> of both the <code>header</code> and <code>footer</code> from black to the teal color. Then change the <code>h2</code> text <code>color</code> to teal as well. Finally, change the <code>background-color</code> of the <code>button</code> to the orange color.</p>\n',
   },
@@ -952,8 +988,7 @@ const responsiveWebDesignChallenges = [
     name: 'Adjust The Tone Of A Color',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-tone-of-a-color',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>All elements have a default <code>background-color</code> of <code>transparent</code>. Our <code>nav</code> element currently appears to have a <code>cyan</code> background, because the element behind it has a <code>background-color</code> set to <code>cyan</code>. Add a <code>background-color</code> to the <code>nav</code> element so it uses the same <code>cyan</code> hue, but has <code>80%</code> saturation and <code>25%</code> lightness values to change its tone and shade.</p>\n',
   },
@@ -962,8 +997,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A Gradual Css Linear Gradient',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-gradual-css-linear-gradient',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Use a <code>linear-gradient()</code> for the <code>div</code> element's <code>background</code>, and set it from a direction of 35 degrees to change the color from <code>#CCFFFF</code> to <code>#FFCCCC</code>.</p>\n",
   },
@@ -972,8 +1006,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use A Css Linear Gradient To Create A Striped Element',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Make stripes by changing the <code>repeating-linear-gradient()</code> to use a gradient angle of <code>45deg</code>, then set the first two color stops to <code>yellow</code>, and finally the second two color stops to <code>black</code>.</p>\n',
   },
@@ -982,8 +1015,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Texture By Adding A Subtle Pattern As A Background Image',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-texture-by-adding-a-subtle-pattern-as-a-background-image',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Using the url of <code>https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png</code>, set the <code>background</code> of the whole page with the <code>body</code> selector.</p>\n',
   },
@@ -992,8 +1024,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Css Transform Scale Property To Change The Size Of An Element',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-change-the-size-of-an-element',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Increase the size of the element with the id of <code>ball2</code> to 1.5 times its original size.</p>\n',
   },
@@ -1002,8 +1033,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Css Transform Scale Property To Scale An Element On Hover',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-scale-property-to-scale-an-element-on-hover',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add a CSS rule for the <code>hover</code> state of the <code>div</code> and use the <code>transform</code> property to scale the <code>div</code> element to 1.1 times its original size when a user hovers over it.</p>\n',
   },
@@ -1012,8 +1042,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Css Transform Property Skewx To Skew An Element Along The X Axis',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-axis',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Skew the element with the id of <code>bottom</code> by 24 degrees along the X-axis by using the <code>transform</code> property.</p>\n',
   },
@@ -1022,8 +1051,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Css Transform Property Skewy To Skew An Element Along The Y Axis',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-axis',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Skew the element with the id of <code>top</code> -10 degrees along the Y-axis by using the <code>transform</code> property.</p>\n',
   },
@@ -1032,8 +1060,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A Graphic Using Css',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-graphic-using-css',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Manipulate the square element in the editor to create the moon shape. First, change the <code>background-color</code> to <code>transparent</code>, then set the <code>border-radius</code> property to 50% to make the circular shape. Finally, change the <code>box-shadow</code> property to set the <code>offset-x</code> to 25px, the <code>offset-y</code> to 10px, <code>blur-radius</code> to 0, <code>spread-radius</code> to 0, and color to <code>blue</code>.</p>\n',
   },
@@ -1042,8 +1069,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A More Complex Shape Using Css And Html',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-more-complex-shape-using-css-and-html',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Transform the element on the screen to a heart. In the <code>heart::after</code> selector, change the <code>background-color</code> to <code>pink</code> and the <code>border-radius</code> to 50%.</p>\n<p>Next, target the element with the class <code>heart</code> (just <code>heart</code>) and fill in the <code>transform</code> property. Use the <code>rotate()</code> function with -45 degrees.</p>\n<p>Finally, in the <code>heart::before</code> selector, set its <code>content</code> property to an empty string.</p>\n',
   },
@@ -1052,8 +1078,7 @@ const responsiveWebDesignChallenges = [
     name: 'Learn How The Css Keyframes And Animation Properties Work',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-the-css-keyframes-and-animation-properties-work',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Create an animation for the element with the id <code>rect</code>, by setting the <code>animation-name</code> to <code>rainbow</code> and the <code>animation-duration</code> to 4 seconds. Next, declare a <code>@keyframes</code> rule, and set the <code>background-color</code> at the beginning of the animation (<code>0%</code>) to blue, the middle of the animation (<code>50%</code>) to green, and the end of the animation (<code>100%</code>) to yellow.</p>\n',
   },
@@ -1062,8 +1087,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Css Animation To Change The Hover State Of A Button',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-css-animation-to-change-the-hover-state-of-a-button',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Note that <code>ms</code> stands for milliseconds, where 1000ms is equal to 1s.</p>\n<p>Use CSS <code>@keyframes</code> to change the <code>background-color</code> of the <code>button</code> element so it becomes <code>#4791d0</code> when a user hovers over it. The <code>@keyframes</code> rule should only have an entry for <code>100%</code>.</p>\n',
   },
@@ -1072,8 +1096,7 @@ const responsiveWebDesignChallenges = [
     name: 'Modify Fill Mode Of An Animation',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/modify-fill-mode-of-an-animation',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Set the <code>animation-fill-mode</code> property of <code>button:hover</code> to <code>forwards</code> so the button stays highlighted when a user hovers over it.</p>\n',
   },
@@ -1082,8 +1105,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Movement Using Css Animation',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-movement-using-css-animation',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add a horizontal motion to the <code>div</code> animation. Using the <code>left</code> offset property, add to the <code>@keyframes</code> rule so rainbow starts at 0 pixels at <code>0%</code>, moves to 25 pixels at <code>50%</code>, and ends at -25 pixels at <code>100%</code>. Don't replace the <code>top</code> property in the editor - the animation should have both vertical and horizontal motion.</p>\n",
   },
@@ -1092,8 +1114,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Visual Direction By Fading An Element From Left To Right',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-visual-direction-by-fading-an-element-from-left-to-right',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Target the element with the id of <code>ball</code> and add the <code>opacity</code> property set to 0.1 at <code>50%</code>, so the element fades as it moves to the right.</p>\n',
   },
@@ -1102,8 +1123,7 @@ const responsiveWebDesignChallenges = [
     name: 'Animate Elements Continually Using An Infinite Animation Count',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-continually-using-an-infinite-animation-count',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>To keep the ball bouncing on the right on a continuous loop, change the <code>animation-iteration-count</code> property to <code>infinite</code>.</p>\n',
   },
@@ -1112,8 +1132,7 @@ const responsiveWebDesignChallenges = [
     name: 'Make A Css Heartbeat Using An Infinite Animation Count',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-a-css-heartbeat-using-an-infinite-animation-count',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Keep the heart beating by adding the <code>animation-iteration-count</code> property for both the <code>back</code> class and the <code>heart</code> class and setting the value to <code>infinite</code>. The <code>heart:before</code> and <code>heart:after</code> selectors do not need any animation properties.</p>\n',
   },
@@ -1122,8 +1141,7 @@ const responsiveWebDesignChallenges = [
     name: 'Animate Elements At Variable Rates',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-at-variable-rates',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Alter the animation rate for the element with the class name of <code>star-1</code> by changing its <code>@keyframes</code> rule to 50%.</p>\n',
   },
@@ -1132,8 +1150,7 @@ const responsiveWebDesignChallenges = [
     name: 'Animate Multiple Elements At Variable Rates',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-multiple-elements-at-variable-rates',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Set the <code>animation-duration</code> of the elements with the classes <code>star-1</code>, <code>star-2</code>, and <code>star-3</code> to 1s, 0.9s, and 1.1s, respectively.</p>\n',
   },
@@ -1142,8 +1159,7 @@ const responsiveWebDesignChallenges = [
     name: 'Change Animation Timing With Keywords',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-animation-timing-with-keywords',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>For the elements with id of <code>ball1</code> and <code>ball2</code>, add an <code>animation-timing-function</code> property to each, and set <code>#ball1</code> to <code>linear</code>, and <code>#ball2</code> to <code>ease-out</code>. Notice the difference between how the elements move during the animation but end together, since they share the same <code>animation-duration</code> of 2 seconds.</p>\n',
   },
@@ -1162,8 +1178,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use A Bezier Curve To Move A Graphic',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-bezier-curve-to-move-a-graphic',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>To see the effect of this Bezier curve in action, change the <code>animation-timing-function</code> of the element with id of <code>red</code> to a <code>cubic-bezier</code> function with x1, y1, x2, y2 values set respectively to 0, 0, 0.58, 1. This will make both elements progress through the animation similarly.</p>\n',
   },
@@ -1172,8 +1187,7 @@ const responsiveWebDesignChallenges = [
     name: 'Make Motion More Natural Using A Bezier Curve',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Change value of the <code>animation-timing-function</code> of the element with the id of <code>green</code> to a <code>cubic-bezier</code> function with x1, y1, x2, y2 values set respectively to 0.311, 0.441, 0.444, 1.649.</p>\n',
   },
@@ -1402,8 +1416,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A Media Query',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add a media query, so that the <code>p</code> tag has a <code>font-size</code> of <code>10px</code> when the device's height is less than or equal to <code>800px</code>.</p>\n",
   },
@@ -1412,8 +1425,7 @@ const responsiveWebDesignChallenges = [
     name: 'Make An Image Responsive',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-an-image-responsive',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add the style rules to the <code>responsive-img</code> class to make it responsive. It should never be wider than its container (in this case, it's the preview window) and it should keep its original aspect ratio. After you have added your code, resize the preview to see how your images behave.</p>\n",
   },
@@ -1422,8 +1434,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use A Retina Image For Higher Resolution Displays',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/use-a-retina-image-for-higher-resolution-displays',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Set the <code>width</code> and <code>height</code> of the <code>img</code> tag to half of their original values. In this case, both the original <code>height</code> and the original <code>width</code> are <code>200px</code>.</p>\n',
   },
@@ -1432,8 +1443,7 @@ const responsiveWebDesignChallenges = [
     name: 'Make Typography Responsive',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/make-typography-responsive',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Set the <code>width</code> of the <code>h2</code> tag to 80% of the viewport's width and the <code>width</code> of the paragraph as 75% of the viewport's smaller dimension.</p>\n",
   },
@@ -1442,8 +1452,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Display Flex To Position Two Boxes',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-display-flex-to-position-two-boxes',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>display</code> to <code>#box-container</code> and set its value to <code>flex</code>.</p>\n',
   },
@@ -1452,8 +1461,7 @@ const responsiveWebDesignChallenges = [
     name: 'Add Flex Superpowers To The Tweet Embed',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/add-flex-superpowers-to-the-tweet-embed',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       "\n<p>Add the CSS property <code>display: flex</code> to all of the following items - note that the selectors are already set up in the CSS:</p>\n<p><code>header</code>, the header's <code>.profile-name</code>, the header's <code>.follow-btn</code>, the header's <code>h3</code> and <code>h4</code>, the <code>footer</code>, and the footer's <code>.stats</code>.</p>\n",
   },
@@ -1462,8 +1470,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Direction Property To Make A Row',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-row',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>flex-direction</code> to the <code>#box-container</code> element, and give it a value of <code>row-reverse</code>.</p>\n',
   },
@@ -1472,8 +1479,7 @@ const responsiveWebDesignChallenges = [
     name: 'Apply The Flex Direction Property To Create Rows In The Tweet Embed',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>flex-direction</code> to both the <code>header</code> and <code>footer</code> and set the value to <code>row</code>.</p>\n',
   },
@@ -1482,8 +1488,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Direction Property To Make A Column',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-column',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>flex-direction</code> to the <code>#box-container</code> element, and give it a value of <code>column</code>.</p>\n',
   },
@@ -1492,8 +1497,7 @@ const responsiveWebDesignChallenges = [
     name: 'Apply The Flex Direction Property To Create A Column In The Tweet Embed',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-a-column-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add the CSS property <code>flex-direction</code> to the header's <code>.profile-name</code> element and set the value to <code>column</code>.</p>\n",
   },
@@ -1502,8 +1506,7 @@ const responsiveWebDesignChallenges = [
     name: 'Align Elements Using The Justify Content Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-justify-content-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>An example helps show this property in action. Add the CSS property <code>justify-content</code> to the <code>#box-container</code> element, and give it a value of <code>center</code>.</p>\n<p><strong>Bonus</strong><br>\nTry the other options for the <code>justify-content</code> property in the code editor to see their differences. But note that a value of <code>center</code> is the only one that will pass this challenge.</p>\n',
   },
@@ -1512,8 +1515,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Justify Content Property In The Tweet Embed',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-justify-content-property-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add the CSS property <code>justify-content</code> to the header's <code>.profile-name</code> element and set the value to any of the options from the last challenge.</p>\n",
   },
@@ -1522,8 +1524,7 @@ const responsiveWebDesignChallenges = [
     name: 'Align Elements Using The Align Items Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-align-items-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>An example helps show this property in action. Add the CSS property <code>align-items</code> to the <code>#box-container</code> element, and give it a value of <code>center</code>.</p>\n<p><strong>Bonus</strong><br>\nTry the other options for the <code>align-items</code> property in the code editor to see their differences. But note that a value of <code>center</code> is the only one that will pass this challenge.</p>\n',
   },
@@ -1532,8 +1533,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Align Items Property In The Tweet Embed',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-items-property-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Add the CSS property <code>align-items</code> to the header's <code>.follow-btn</code> element. Set the value to <code>center</code>.</p>\n",
   },
@@ -1542,8 +1542,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Wrap Property To Wrap A Row Or Column',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-wrap-property-to-wrap-a-row-or-column',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>The current layout has too many boxes for one row. Add the CSS property <code>flex-wrap</code> to the <code>#box-container</code> element, and give it a value of <code>wrap</code>.</p>\n',
   },
@@ -1552,8 +1551,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Shrink Property To Shrink Items',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shrink-property-to-shrink-items',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>flex-shrink</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>1</code> and <code>#box-2</code> a value of <code>2</code>.</p>\n',
   },
@@ -1562,8 +1560,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Grow Property To Expand Items',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-grow-property-to-expand-items',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>flex-grow</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>1</code> and <code>#box-2</code> a value of <code>2</code>.</p>\n',
   },
@@ -1572,8 +1569,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Basis Property To Set The Initial Size Of An Item',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-basis-property-to-set-the-initial-size-of-an-item',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Set the initial size of the boxes using <code>flex-basis</code>. Add the CSS property <code>flex-basis</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>10em</code> and <code>#box-2</code> a value of <code>20em</code>.</p>\n',
   },
@@ -1582,8 +1578,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Flex Shorthand Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shorthand-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>flex</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> the values so its <code>flex-grow</code> is <code>2</code>, its <code>flex-shrink</code> is <code>2</code>, and its <code>flex-basis</code> is <code>150px</code>. Give <code>#box-2</code> the values so its <code>flex-grow</code> is <code>1</code>, its <code>flex-shrink</code> is <code>1</code>, and its <code>flex-basis</code> is <code>150px</code>.</p>\n<p>These values will cause <code>#box-1</code> to grow to fill the extra space at twice the rate of <code>#box-2</code> when the container is greater than 300px and shrink at twice the rate of <code>#box-2</code> when the container is less than 300px. 300px is the combined size of the <code>flex-basis</code> values of the two boxes.</p>\n',
   },
@@ -1592,8 +1587,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Order Property To Rearrange Items',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-order-property-to-rearrange-items',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>order</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>2</code> and give <code>#box-2</code> a value of <code>1</code>.</p>\n',
   },
@@ -1602,8 +1596,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use The Align Self Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-self-property',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Add the CSS property <code>align-self</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>center</code> and give <code>#box-2</code> a value of <code>flex-end</code>.</p>\n',
   },
@@ -1612,8 +1605,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Your First Css Grid',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-your-first-css-grid',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Change the display of the div with the <code>container</code> class to <code>grid</code>.</p>\n',
   },
@@ -1622,8 +1614,7 @@ const responsiveWebDesignChallenges = [
     name: 'Add Columns With Grid Template Columns',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-columns-with-grid-template-columns',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Give the grid container three columns that are each <code>100px</code> wide.</p>\n',
   },
@@ -1632,8 +1623,7 @@ const responsiveWebDesignChallenges = [
     name: 'Add Rows With Grid Template Rows',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-rows-with-grid-template-rows',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Add two rows to the grid that are <code>50px</code> tall each.</p>\n',
   },
@@ -1642,8 +1632,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Css Grid Units To Change The Size Of Columns And Rows',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-css-grid-units-to-change-the-size-of-columns-and-rows',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Make a grid with three columns whose widths are as follows: 1fr, 100px, and 2fr.</p>\n',
   },
@@ -1652,8 +1641,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A Column Gap Using Grid Column Gap',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-column-gap-using-grid-column-gap',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Give the columns in the grid a <code>20px</code> gap.</p>\n',
   },
@@ -1662,8 +1650,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create A Row Gap Using Grid Row Gap',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-row-gap-using-grid-row-gap',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Create a gap for the rows that is <code>5px</code> tall.</p>\n',
   },
@@ -1672,8 +1659,7 @@ const responsiveWebDesignChallenges = [
     name: 'Add Gaps Faster With Grid Gap',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-gaps-faster-with-grid-gap',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Use <code>grid-gap</code> to introduce a <code>10px</code> gap between the rows and <code>20px</code> gap between the columns.</p>\n',
   },
@@ -1682,8 +1668,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Grid Column To Control Spacing',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-column-to-control-spacing',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Make the item with the class <code>item5</code> consume the last two columns of the grid.</p>\n',
   },
@@ -1692,8 +1677,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Grid Row To Control Spacing',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Make the element with the <code>item5</code> class consume the last two rows.</p>\n',
   },
@@ -1702,8 +1686,7 @@ const responsiveWebDesignChallenges = [
     name: 'Align An Item Horizontally Using Justify Self',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-horizontally-using-justify-self',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Use the <code>justify-self</code> property to center the item with the class <code>item2</code>.</p>\n',
   },
@@ -1712,8 +1695,7 @@ const responsiveWebDesignChallenges = [
     name: 'Align An Item Vertically Using Align Self',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-vertically-using-align-self',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>Align the item with the class <code>item3</code> vertically at the <code>end</code>.</p>\n',
   },
@@ -1742,8 +1724,7 @@ const responsiveWebDesignChallenges = [
     name: 'Divide The Grid Into An Area Template',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/divide-the-grid-into-an-area-template',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       "\n<p>Change the template so the <code>footer</code> area spans the entire bottom row. Defining the areas won't have any visual effect right now. Later, you will make an item use an area to see how it works.</p>\n",
   },
@@ -1752,8 +1733,7 @@ const responsiveWebDesignChallenges = [
     name: 'Place Items In Grid Areas Using The Grid Area Property',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/place-items-in-grid-areas-using-the-grid-area-property',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Place an element with the <code>item5</code> class in the <code>footer</code> area using the <code>grid-area</code> property.</p>\n',
   },
@@ -1762,8 +1742,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Grid Area Without Creating An Areas Template',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-area-without-creating-an-areas-template',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Using the <code>grid-area</code> property, place the element with <code>item5</code> class between the third and fourth horizontal lines and between the first and fourth vertical lines.</p>\n',
   },
@@ -1772,8 +1751,7 @@ const responsiveWebDesignChallenges = [
     name: 'Reduce Repetition Using The Repeat Function',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/reduce-repetition-using-the-repeat-function',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Use <code>repeat</code> to remove repetition from the <code>grid-template-columns</code> property.</p>\n',
   },
@@ -1782,8 +1760,7 @@ const responsiveWebDesignChallenges = [
     name: 'Limit Item Size Using The Minmax Function',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/limit-item-size-using-the-minmax-function',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Using the <code>minmax</code> function, replace the <code>1fr</code> in the <code>repeat</code> function with a column size that has the minimum width of <code>90px</code> and the maximum width of <code>1fr</code>, and resize the preview panel to see the effect.</p>\n',
   },
@@ -1792,8 +1769,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Flexible Layouts Using Auto Fill',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fill',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>In the first grid, use <code>auto-fill</code> with <code>repeat</code> to fill the grid with columns that have a minimum width of <code>60px</code> and maximum of <code>1fr</code>. Then resize the preview to see auto-fill in action.</p>\n',
   },
@@ -1802,8 +1778,7 @@ const responsiveWebDesignChallenges = [
     name: 'Create Flexible Layouts Using Auto Fit',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit',
     remove: ['ALL_HELPERS'],
-    description:
-      "",
+    description: '',
     instructions:
       '\n<p>In the second grid, use <code>auto-fit</code> with <code>repeat</code> to fill the grid with columns that have a minimum width of <code>60px</code> and maximum of <code>1fr</code>. Then resize the preview to see the difference.</p>\n',
   },
@@ -1812,8 +1787,7 @@ const responsiveWebDesignChallenges = [
     name: 'Use Media Queries To Create Responsive Layouts',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-media-queries-to-create-responsive-layouts',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>When the viewport width is <code>400px</code> or more, make the header area occupy the top row completely and the footer area occupy the bottom row completely.</p>\n',
   },
@@ -1822,201 +1796,17 @@ const responsiveWebDesignChallenges = [
     name: 'Create Grids Within Grids',
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids',
     remove: ['ALL_HELPERS'],
-    description:
-      '',
+    description: '',
     instructions:
       '\n<p>Turn the element with the <code>item3</code> class into a grid with two columns with a width of <code>auto</code> and <code>1fr</code> using <code>display</code> and <code>grid-template-columns</code>.</p>\n',
   },
 ];
 
-// function executeScript(script, params) {
-//   chrome.tabs.executeScript({
-//     code: '(' + script + ')(' + params + ');', //argument here is a string but function.toString() returns function's code
-//   });
-// }
-
-// function clearBreadcrumbTitle() {
-//   const breadcrumbTitle = document.querySelector(
-//     '.challenge-title-breadcrumbs'
-//   );
-
-//   breadcrumbTitle?.remove();
-// }
-
-// function clearDescription() {
-//   const description = document.querySelector('#description');
-
-//   if (description) description.innerHTML = '';
-// }
-
-// function clearInstructions() {
-//   const instructions = document.querySelector('#instructions');
-
-//   if (instructions) instructions.innerHTML = '';
-// }
-
-// function clearHelpButton() {
-//   const getHelpButton = document.querySelector('#get-help-dropdown');
-
-//   getHelpButton?.remove();
-// }
-
-// function clearTestCases() {
-//   const testCases = document.querySelector('.challenge-test-suite');
-
-//   testCases?.remove();
-// }
-
-// function clearTestOutput() {
-//   const output = document.querySelectorAll('.horizontal.reflex-element');
-
-//   output[2]?.remove();
-// }
-
-// function clearAllHelpers() {
-//   const breadcrumbTitle = document.querySelector(
-//     '.challenge-title-breadcrumbs'
-//   );
-//   const description = document.querySelector('#description');
-//   const getHelpButton = document.querySelector('#get-help-dropdown');
-//   const testCases = document.querySelector('.challenge-test-suite');
-//   const output = document.querySelectorAll('.horizontal.reflex-element');
-//   const instructions = document.querySelector('#instructions');
-
-//   breadcrumbTitle?.remove();
-//   if (description) description.innerHTML = '';
-//   if (instructions) instructions.innerHTML = '';
-//   getHelpButton?.remove();
-//   testCases?.remove();
-//   output[2]?.remove();
-// }
-
-// function addDescription(element) {
-//   const description = document.querySelector('#description');
-//   if (description) description.innerHTML = element;
-// }
-
-// function addInstructions(element) {
-//   const instructions = document.querySelector('#instructions');
-//   if (instructions) instructions.innerHTML = element;
-// }
-
-// function removeElements(challenge) {
-//   if (challenge.remove)
-//     challenge.remove.forEach((element) => {
-//       switch (element) {
-//         case CONSTANTS.ALL_HELPERS:
-//           executeScript(clearAllHelpers);
-//           break;
-//         case CONSTANTS.BREADCRUMB_TITLE:
-//           executeScript(clearBreadcrumbTitle);
-//           break;
-//         case CONSTANTS.DESCRIPTION:
-//           executeScript(clearDescription);
-//           break;
-//         case CONSTANTS.GET_HELP_BUTTON:
-//           executeScript(clearHelpButton);
-//           break;
-//         case CONSTANTS.TEST_CASES:
-//           executeScript(clearTestCases);
-//           break;
-//         case CONSTANTS.TEST_OUTPUT:
-//           executeScript(clearTestOutput);
-//           break;
-//         default:
-//           executeScript(clearAllHelpers);
-//           break;
-//       }
-//     });
-// }
-
-// function addElements(challenge) {
-//   executeScript(addDescription, '`' + challenge.description + '`');
-//   executeScript(addInstructions, '`' + challenge.instructions + '`');
-// }
-
-// function clearHelpers(challenge) {
-//   removeElements(challenge);
-//   addElements(challenge);
-// }
-
-function isURLWhitelisted(url) {
-  if (!url) return false;
-
-  for (let i = 0; i < responsiveWebDesignChallenges.length; i++) {
-    if (url.startsWith(responsiveWebDesignChallenges[i].url)) return true;
-  }
-
-  return false;
-}
-
-function executeClearScript() {
-  chrome.tabs.executeScript({
-    file: 'content.js',
-  });
-}
-
-const appliedAccessibilityURL = 'https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility';
-const responsiveWebDesignPrinciplesURL = 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query';
-const responsiveWebDesignPrinciplesIndex = responsiveWebDesignChallenges.findIndex((challenge) => challenge.url == responsiveWebDesignPrinciplesURL);
-
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  console.log(changeInfo);
-  if (changeInfo.status == "complete") {
-    chrome.storage.local.get('challengeIndex', function (items) {
-      chrome.storage.local.get('fccUtilityOn', function (_items) {
-        const switchOn = _items.fccUtilityOn;
-        chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-          if (!switchOn) return;
-          if (tabs[0]?.url.startsWith(appliedAccessibilityURL)) {
-            chrome.storage.local.set({ challengeIndex: responsiveWebDesignPrinciplesIndex }, () => {
-              chrome.tabs.update({
-                url: responsiveWebDesignPrinciplesURL,
-              });
-            });
-          }
-          if (isURLWhitelisted(tabs[0]?.url)) {
-            if (
-              tabs[0]?.url.startsWith(
-                responsiveWebDesignChallenges[items.challengeIndex].url
-              )
-            )
-              executeClearScript();
-            // clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
-            else if (
-              tabs[0]?.url.startsWith(
-                responsiveWebDesignChallenges[items.challengeIndex + 1].url
-              )
-            ) {
-              // clearHelpers(
-              //   responsiveWebDesignChallenges[items.challengeIndex + 1]
-              // );
-              chrome.storage.local.set({
-                challengeIndex: items.challengeIndex + 1,
-              }, () => {
-                executeClearScript();
-              });
-            } else {
-              chrome.tabs.update({
-                url: responsiveWebDesignChallenges[items.challengeIndex].url,
-              });
-              executeClearScript();
-              // clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
-            }
-          } else {
-            chrome.tabs.update({
-              url: responsiveWebDesignChallenges[items.challengeIndex].url,
-            });
-            executeClearScript();
-            // clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
-          }
-        });
-      });
-    });
-  }
-});
-
 (function () {
-  chrome.storage.local.set({ challengeIndex: 0 });
-  chrome.storage.local.set({ fccUtilityOn: false });
+  console.log('INIT_BACKGROUND');
+  chrome.storage.local.set({
+    RESPONSIVE_WEB_DESIGN_CHALLNEGES: RESPONSIVE_WEB_DESIGN_CHALLNEGES,
+    CHALLENGE_INDEX: 0,
+    FCC_UTILITY_ENABLED: false,
+  });
 })();

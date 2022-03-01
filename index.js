@@ -200,13 +200,13 @@ challengeSelect.addEventListener('change', function () {
       url: challengeSelect.value,
     });
   chrome.storage.local.set({
-    challengeIndex: challenges.indexOf(challengeSelect.value),
+    CHALLENGE_INDEX: challenges.indexOf(challengeSelect.value),
   });
 });
 
 resetButton.addEventListener('click', function () {
-  chrome.storage.local.set({ challengeIndex: 0 });
-  chrome.storage.local.set({ fccUtilityOn: true });
+  chrome.storage.local.set({ CHALLENGE_INDEX: 0 });
+  chrome.storage.local.set({ FCC_UTILITY_ENABLED: true });
   chrome.tabs.update({
     url: challenges[0],
   });
@@ -216,16 +216,16 @@ resetButton.addEventListener('click', function () {
 
 onOffSwitch.addEventListener('change', function () {
   if (onOffSwitch.checked) {
-    chrome.storage.local.set({ fccUtilityOn: true });
+    chrome.storage.local.set({ FCC_UTILITY_ENABLED: true });
   } else {
-    chrome.storage.local.set({ fccUtilityOn: false });
+    chrome.storage.local.set({ FCC_UTILITY_ENABLED: false });
   }
   chrome.tabs.reload();
 });
 
 startTestButton.addEventListener('click', function (e) {
   onOffSwitch.checked = true;
-  chrome.storage.local.set({ fccUtilityOn: true });
+  chrome.storage.local.set({ FCC_UTILITY_ENABLED: true });
   chrome.tabs.update({
     url: challenges[0],
   });
@@ -302,15 +302,15 @@ const baseURL = 'https://www.freecodecamp.org/learn/responsive-web-design';
       goToFCCButton.disabled = true;
     }
   });
-  chrome.storage.local.get('fccUtilityOn', function (items) {
-    _onOffSwitch.checked = items.fccUtilityOn || false;
+  chrome.storage.local.get('FCC_UTILITY_ENABLED', function (items) {
+    _onOffSwitch.checked = items.FCC_UTILITY_ENABLED || false;
   });
   populateDropdown();
-  chrome.storage.local.get('challengeIndex', function (items) {
+  chrome.storage.local.get('CHALLENGE_INDEX', function (items) {
     const challengeSelect = document.getElementById('challenge-select');
-    if (!items.challengeIndex) {
-      chrome.storage.local.set({ challengeIndex: 0 });
+    if (!items.CHALLENGE_INDEX) {
+      chrome.storage.local.set({ CHALLENGE_INDEX: 0 });
     }
-    challengeSelect.value = challenges[items.challengeIndex] || '';
+    challengeSelect.value = challenges[items.CHALLENGE_INDEX] || '';
   });
 })();
