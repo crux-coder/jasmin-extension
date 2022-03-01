@@ -1892,13 +1892,11 @@ function clearAllHelpers() {
 }
 
 function addDescription(element) {
-  console.log(element);
   const description = document.querySelector('#description');
   if (description) description.innerHTML = element;
 }
 
 function addInstructions(element) {
-  console.log(element);
   const instructions = document.querySelector('#instructions');
   if (instructions) instructions.innerHTML = element;
 }
