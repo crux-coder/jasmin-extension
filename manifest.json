@@ -11,6 +11,13 @@
   "background": {
     "scripts": ["background.js"]
   },
+  "web_accessible_resources": ["data/*.json"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.freecodecamp.org/*"],
+      "js": ["content.js"]
+    }
+  ],
   "description": "Extension for taking the Jasmin's test..",
   "manifest_version": 2,
   "name": "Jasmin's Extension",
@@ -20,6 +27,6 @@
     "https://www.freecodecamp.org/*",
     "storage"
   ],
-  "version": "0.2.1",
+  "version": "0.3",
   "content_security_policy": "default-src 'self'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';img-src 'self' data: *; script-src 'self'"
 }
