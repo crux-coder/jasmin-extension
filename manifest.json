@@ -11,6 +11,7 @@
   "background": {
     "scripts": ["background.js"]
   },
+  "web_accessible_resources": ["data/*.json"],
   "content_scripts": [
     {
       "matches": ["https://www.freecodecamp.org/*"],
