@@ -1443,7 +1443,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-display-flex-to-position-two-boxes',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>This section uses alternating challenge styles to show how to use CSS to position elements in a flexible way. First, a challenge will explain theory, then a practical challenge using a simple tweet component will apply the flexbox concept.</p>\n<p>Placing the CSS property <code>display: flex;</code> on an element allows you to use other flex properties to build a responsive page.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>display</code> to <code>#box-container</code> and set its value to <code>flex</code>.</p>\n',
   },
@@ -1453,7 +1453,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/add-flex-superpowers-to-the-tweet-embed',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p>To the right is the tweet embed that will be used as a practical example. Some of the elements would look better with a different layout. The last challenge demonstrated <code>display: flex</code>. Here you'll add it to several components in the tweet embed to start adjusting their positioning.</p>\n",
+      "",
     instructions:
       "\n<p>Add the CSS property <code>display: flex</code> to all of the following items - note that the selectors are already set up in the CSS:</p>\n<p><code>header</code>, the header's <code>.profile-name</code>, the header's <code>.follow-btn</code>, the header's <code>h3</code> and <code>h4</code>, the <code>footer</code>, and the footer's <code>.stats</code>.</p>\n",
   },
@@ -1463,7 +1463,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-row',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Adding <code>display: flex</code> to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the <code>flex-direction</code> property to the parent item and setting it to row or column. Creating a row will align the children horizontally, and creating a column will align the children vertically.</p>\n<p>Other options for <code>flex-direction</code> are <code>row-reverse</code> and <code>column-reverse</code>.</p>\n<p><strong>Note:</strong> The default value for the <code>flex-direction</code> property is <code>row</code>.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>flex-direction</code> to the <code>#box-container</code> element, and give it a value of <code>row-reverse</code>.</p>\n',
   },
@@ -1473,7 +1473,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The <code>header</code> and <code>footer</code> in the tweet embed example have child items that could be arranged as rows using the <code>flex-direction</code> property. This tells CSS to align the children horizontally.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>flex-direction</code> to both the <code>header</code> and <code>footer</code> and set the value to <code>row</code>.</p>\n',
   },
@@ -1483,7 +1483,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-column',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The last two challenges used the <code>flex-direction</code> property set to <code>row</code>. This property can also create a column by vertically stacking the children of a flex container.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>flex-direction</code> to the <code>#box-container</code> element, and give it a value of <code>column</code>.</p>\n',
   },
@@ -1493,7 +1493,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-a-column-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The tweet embed <code>header</code> and <code>footer</code> used the <code>flex-direction</code> property earlier with a row value. Similarly, the items inside the <code>.profile-name</code> element would work well stacked as a column.</p>\n',
+      '',
     instructions:
       "\n<p>Add the CSS property <code>flex-direction</code> to the header's <code>.profile-name</code> element and set the value to <code>column</code>.</p>\n",
   },
@@ -1503,7 +1503,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-justify-content-property',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and space out the flex items a certain way. Fortunately, the <code>justify-content</code> property has several options to do this. But first, there is some important terminology to understand before reviewing those options.</p>\n<p><a href="https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg">Here is a useful image showing a row to illustrate the concepts below.</a></p>\n<p>Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the <strong>main axis</strong>. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items.</p>\n<p>There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is <code>justify-content: center;</code>, which aligns all the flex items to the center inside the flex container. Other options include:</p>\n<ul><li><code>flex-start</code>: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container. This is the default alignment if no <code>justify-content</code> is specified.</li><li><code>flex-end</code>: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.</li><li><code>space-between</code>: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the remaining space is distributed evenly among the other items.</li><li><code>space-around</code>: similar to <code>space-between</code> but the first and last items are not locked to the edges of the container, the space is distributed around all the items with a half space on either end of the flex container.</li><li><code>space-evenly</code>: Distributes space evenly between the flex items with a full space at either end of the flex container</li></ul>\n',
+      '',
     instructions:
       '\n<p>An example helps show this property in action. Add the CSS property <code>justify-content</code> to the <code>#box-container</code> element, and give it a value of <code>center</code>.</p>\n<p><strong>Bonus</strong><br>\nTry the other options for the <code>justify-content</code> property in the code editor to see their differences. But note that a value of <code>center</code> is the only one that will pass this challenge.</p>\n',
   },
@@ -1513,7 +1513,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-justify-content-property-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The last challenge showed an example of the <code>justify-content</code> property. For the tweet embed, this property can be applied to align the items in the <code>.profile-name</code> element.</p>\n',
+      '',
     instructions:
       "\n<p>Add the CSS property <code>justify-content</code> to the header's <code>.profile-name</code> element and set the value to any of the options from the last challenge.</p>\n",
   },
@@ -1523,7 +1523,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-align-items-property',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The <code>align-items</code> property is similar to <code>justify-content</code>. Recall that the <code>justify-content</code> property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.</p>\n<p>Flex containers also have a <strong>cross axis</strong> which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.</p>\n<p>CSS offers the <code>align-items</code> property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.</p>\n<p>The different values available for <code>align-items</code> include:</p>\n<ul><li><code>flex-start</code>: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.</li><li><code>flex-end</code>: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.</li><li><code>center</code>: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).</li><li><code>stretch</code>: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom. This is the default value if no <code>align-items</code> value is specified.</li><li><code>baseline</code>: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.</li></ul>\n',
+      '',
     instructions:
       '\n<p>An example helps show this property in action. Add the CSS property <code>align-items</code> to the <code>#box-container</code> element, and give it a value of <code>center</code>.</p>\n<p><strong>Bonus</strong><br>\nTry the other options for the <code>align-items</code> property in the code editor to see their differences. But note that a value of <code>center</code> is the only one that will pass this challenge.</p>\n',
   },
@@ -1533,7 +1533,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-items-property-in-the-tweet-embed',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The last challenge introduced the <code>align-items</code> property and gave an example. This property can be applied to a few tweet embed elements to align the flex items inside them.</p>\n',
+      '',
     instructions:
       "\n<p>Add the CSS property <code>align-items</code> to the header's <code>.follow-btn</code> element. Set the value to <code>center</code>.</p>\n",
   },
@@ -1543,7 +1543,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-wrap-property-to-wrap-a-row-or-column',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>CSS flexbox has a feature to split a flex item into multiple rows (or columns). By default, a flex container will fit all flex items together. For example, a row will all be on one line.</p>\n<p>However, using the <code>flex-wrap</code> property tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.</p>\n<p>CSS also has options for the direction of the wrap:</p>\n<ul><li><code>nowrap</code>: this is the default setting, and does not wrap items.</li><li><code>wrap</code>: wraps items onto multiple lines from top-to-bottom if they are in rows and left-to-right if they are in columns.</li><li><code>wrap-reverse</code>: wraps items onto multiple lines from bottom-to-top if they are in rows and right-to-left if they are in columns.</li></ul>\n',
+      '',
     instructions:
       '\n<p>The current layout has too many boxes for one row. Add the CSS property <code>flex-wrap</code> to the <code>#box-container</code> element, and give it a value of <code>wrap</code>.</p>\n',
   },
@@ -1553,7 +1553,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shrink-property-to-shrink-items',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p>So far, all the properties in the challenges apply to the flex container (the parent of the flex items). However, there are several useful properties for the flex items.</p>\n<p>The first is the <code>flex-shrink</code> property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.</p>\n<p>The <code>flex-shrink</code> property takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a <code>flex-shrink</code> value of <code>1</code> and the other has a <code>flex-shrink</code> value of <code>3</code>, the one with the value of <code>3</code> will shrink three times as much as the other.</p>\n",
+      "",
     instructions:
       '\n<p>Add the CSS property <code>flex-shrink</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>1</code> and <code>#box-2</code> a value of <code>2</code>.</p>\n',
   },
@@ -1563,7 +1563,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-grow-property-to-expand-items',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The opposite of <code>flex-shrink</code> is the <code>flex-grow</code> property. Recall that <code>flex-shrink</code> controls the size of the items when the container shrinks. The <code>flex-grow</code> property controls the size of items when the parent container expands.</p>\n<p>Using a similar example from the last challenge, if one item has a <code>flex-grow</code> value of <code>1</code> and the other has a <code>flex-grow</code> value of <code>3</code>, the one with the value of <code>3</code> will grow three times as much as the other.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>flex-grow</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>1</code> and <code>#box-2</code> a value of <code>2</code>.</p>\n',
   },
@@ -1573,7 +1573,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-basis-property-to-set-the-initial-size-of-an-item',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The <code>flex-basis</code> property specifies the initial size of the item before CSS makes adjustments with <code>flex-shrink</code> or <code>flex-grow</code>.</p>\n<p>The units used by the <code>flex-basis</code> property are the same as other size properties (<code>px</code>, <code>em</code>, <code>%</code>, etc.). The value <code>auto</code> sizes items based on the content.</p>\n',
+      '',
     instructions:
       '\n<p>Set the initial size of the boxes using <code>flex-basis</code>. Add the CSS property <code>flex-basis</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>10em</code> and <code>#box-2</code> a value of <code>20em</code>.</p>\n',
   },
@@ -1583,7 +1583,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shorthand-property',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>There is a shortcut available to set several flex properties at once. The <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> properties can all be set together by using the <code>flex</code> property.</p>\n<p>For example, <code>flex: 1 0 10px;</code> will set the item to <code>flex-grow: 1;</code>, <code>flex-shrink: 0;</code>, and <code>flex-basis: 10px;</code>.</p>\n<p>The default property settings are <code>flex: 0 1 auto;</code>.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>flex</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> the values so its <code>flex-grow</code> is <code>2</code>, its <code>flex-shrink</code> is <code>2</code>, and its <code>flex-basis</code> is <code>150px</code>. Give <code>#box-2</code> the values so its <code>flex-grow</code> is <code>1</code>, its <code>flex-shrink</code> is <code>1</code>, and its <code>flex-basis</code> is <code>150px</code>.</p>\n<p>These values will cause <code>#box-1</code> to grow to fill the extra space at twice the rate of <code>#box-2</code> when the container is greater than 300px and shrink at twice the rate of <code>#box-2</code> when the container is less than 300px. 300px is the combined size of the <code>flex-basis</code> values of the two boxes.</p>\n',
   },
@@ -1593,7 +1593,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-order-property-to-rearrange-items',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The <code>order</code> property is used to tell CSS the order of how flex items appear in the flex container. By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, and negative numbers can be used.</p>\n',
+      '',
     instructions:
       '\n<p>Add the CSS property <code>order</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>2</code> and give <code>#box-2</code> a value of <code>1</code>.</p>\n',
   },
@@ -1603,7 +1603,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-self-property',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p>The final property for flex items is <code>align-self</code>. This property allows you to adjust each item's alignment individually, instead of setting them all at once. This is useful since other common adjustment techniques using the CSS properties <code>float</code>, <code>clear</code>, and <code>vertical-align</code> do not work on flex items.</p>\n<p><code>align-self</code> accepts the same values as <code>align-items</code> and will override any value set by the <code>align-items</code> property.</p>\n",
+      "",
     instructions:
       '\n<p>Add the CSS property <code>align-self</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>center</code> and give <code>#box-2</code> a value of <code>flex-end</code>.</p>\n',
   },
@@ -1613,7 +1613,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-your-first-css-grid',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Turn any HTML element into a grid container by setting its <code>display</code> property to <code>grid</code>. This gives you the ability to use all the other properties associated with CSS Grid.</p>\n<p><strong>Note:</strong> In CSS Grid, the parent element is referred to as the <dfn>container</dfn> and its children are called <dfn>items</dfn>.</p>\n',
+      '',
     instructions:
       '\n<p>Change the display of the div with the <code>container</code> class to <code>grid</code>.</p>\n',
   },
@@ -1623,7 +1623,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-columns-with-grid-template-columns',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Simply creating a grid element doesn\'t get you very far. You need to define the structure of the grid as well. To add some columns to the grid, use the <code>grid-template-columns</code> property on a grid container as demonstrated below:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>\n  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>\n  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 50px 50px<span class="token punctuation">;</span>\n<span class="token punctuation">}</span>\n</code></pre>\n<p>This will give your grid two columns that are each 50px wide. The number of parameters given to the <code>grid-template-columns</code> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.</p>\n',
+      '',
     instructions:
       '\n<p>Give the grid container three columns that are each <code>100px</code> wide.</p>\n',
   },
@@ -1633,7 +1633,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-rows-with-grid-template-rows',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The grid you created in the last challenge will set the number of rows automatically. To adjust the rows manually, use the <code>grid-template-rows</code> property in the same way you used <code>grid-template-columns</code> in the previous challenge.</p>\n',
+      '',
     instructions:
       '\n<p>Add two rows to the grid that are <code>50px</code> tall each.</p>\n',
   },
@@ -1643,7 +1643,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-css-grid-units-to-change-the-size-of-columns-and-rows',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>You can use absolute and relative units like <code>px</code> and <code>em</code> in CSS Grid to define the size of rows and columns. You can use these as well:</p>\n<p><code>fr</code>: sets the column or row to a fraction of the available space,</p>\n<p><code>auto</code>: sets the column or row to the width or height of its content automatically,</p>\n<p><code>%</code>: adjusts the column or row to the percent width of its container.</p>\n<p>Here\'s the code that generates the output in the preview:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-template-columns</span><span class="token punctuation">:</span> auto 50px 10% 2fr 1fr<span class="token punctuation">;</span>\n</code></pre>\n<p>This snippet creates five columns. The first column is as wide as its content, the second column is 50px, the third column is 10% of its container, and for the last two columns; the remaining space is divided into three sections, two are allocated for the fourth column, and one for the fifth.</p>\n',
+      '',
     instructions:
       '\n<p>Make a grid with three columns whose widths are as follows: 1fr, 100px, and 2fr.</p>\n',
   },
@@ -1653,7 +1653,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-column-gap-using-grid-column-gap',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>So far in the grids you have created, the columns have all been tight up against each other. Sometimes you want a gap in between the columns. To add a gap between the columns, use the <code>grid-column-gap</code> property like this:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-column-gap</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>\n</code></pre>\n<p>This creates 10px of empty space between all of our columns.</p>\n',
+      '',
     instructions:
       '\n<p>Give the columns in the grid a <code>20px</code> gap.</p>\n',
   },
@@ -1663,7 +1663,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-row-gap-using-grid-row-gap',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>You can add a gap in between the rows of a grid using <code>grid-row-gap</code> in the same way that you added a gap in between columns in the previous challenge.</p>\n',
+      '',
     instructions:
       '\n<p>Create a gap for the rows that is <code>5px</code> tall.</p>\n',
   },
@@ -1673,7 +1673,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-gaps-faster-with-grid-gap',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p><code>grid-gap</code> is a shorthand property for <code>grid-row-gap</code> and <code>grid-column-gap</code> from the previous two challenges that's more convenient to use. If <code>grid-gap</code> has one value, it will create a gap between all rows and columns. However, if there are two values, it will use the first one to set the gap between the rows and the second value for the columns.</p>\n",
+      "",
     instructions:
       '\n<p>Use <code>grid-gap</code> to introduce a <code>10px</code> gap between the rows and <code>20px</code> gap between the columns.</p>\n',
   },
@@ -1683,7 +1683,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-column-to-control-spacing',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Up to this point, all the properties that have been discussed are for grid containers. The <code>grid-column</code> property is the first one for use on the grid items themselves.</p>\n<p>The hypothetical horizontal and vertical lines that create the grid are referred to as <dfn>lines</dfn>. These lines are numbered starting with 1 at the top left corner of the grid and move right for columns and down for rows, counting upward.</p>\n<p>This is what the lines look like for a 3x3 grid:</p>\n<div style="position:relative;margin:auto;background:Gainsboro;display:block;margin-top:100px;margin-bottom:50px;width:200px;height:200px;"><p style="left:25%;top:-30%;font-size:130%;position:absolute;color:RoyalBlue;">column lines</p><p style="left:0%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;">1</p><p style="left:30%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;">2</p><p style="left:63%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;">3</p><p style="left:95%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;">4</p><p style="left:-40%;top:45%;font-size:130%;transform:rotateZ(-90deg);position:absolute;">row lines</p><p style="left:-10%;top:-10%;font-size:130%;position:absolute;">1</p><p style="left:-10%;top:21%;font-size:130%;position:absolute;">2</p><p style="left:-10%;top:53%;font-size:130%;position:absolute;">3</p><p style="left:-10%;top:85%;font-size:130%;position:absolute;">4</p><div style="left:0%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;"></div><div style="left:31%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;"></div><div style="left:63%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;"></div><div style="left:95%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;"></div><div style="left:0%;top:0%;width:100%;height:5%;background:black;position:absolute;"></div><div style="left:0%;top:31%;width:100%;height:5%;background:black;position:absolute;"></div><div style="left:0%;top:63%;width:100%;height:5%;background:black;position:absolute;"></div><div style="left:0%;top:95%;width:100%;height:5%;background:black;position:absolute;"></div></div>\n<p>To control the number of columns an item will consume, you can use the <code>grid-column</code> property in conjunction with the line numbers you want the item to start and stop at.</p>\n<p>Here\'s an example:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-column</span><span class="token punctuation">:</span> 1 / 3<span class="token punctuation">;</span>\n</code></pre>\n<p>This will make the item start at the first vertical line of the grid on the left and span to the 3rd line of the grid, consuming two columns.</p>\n',
+      '',
     instructions:
       '\n<p>Make the item with the class <code>item5</code> consume the last two columns of the grid.</p>\n',
   },
@@ -1693,7 +1693,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Of course, you can make items consume multiple rows just like you can with columns. You define the horizontal lines you want an item to start and stop at using the <code>grid-row</code> property on a grid item.</p>\n',
+      '',
     instructions:
       '\n<p>Make the element with the <code>item5</code> class consume the last two rows.</p>\n',
   },
@@ -1703,7 +1703,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-horizontally-using-justify-self',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p>In CSS Grid, the content of each item is located in a box which is referred to as a <dfn>cell</dfn>. You can align the content's position within its cell horizontally using the <code>justify-self</code> property on a grid item. By default, this property has a value of <code>stretch</code>, which will make the content fill the whole width of the cell. This CSS Grid property accepts other values as well:</p>\n<p><code>start</code>: aligns the content at the left of the cell,</p>\n<p><code>center</code>: aligns the content in the center of the cell,</p>\n<p><code>end</code>: aligns the content at the right of the cell.</p>\n",
+      "",
     instructions:
       '\n<p>Use the <code>justify-self</code> property to center the item with the class <code>item2</code>.</p>\n',
   },
@@ -1713,7 +1713,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-vertically-using-align-self',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p>Just as you can align an item horizontally, there's a way to align an item vertically as well. To do this, you use the <code>align-self</code> property on an item. This property accepts all of the same values as <code>justify-self</code> from the last challenge.</p>\n",
+      "",
     instructions:
       '\n<p>Align the item with the class <code>item3</code> vertically at the <code>end</code>.</p>\n',
   },
@@ -1743,7 +1743,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/divide-the-grid-into-an-area-template',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>You can group cells of your grid together into an <dfn>area</dfn> and give the area a custom name. Do this by using <code>grid-template-areas</code> on the container like this:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-template-areas</span><span class="token punctuation">:</span>\n  <span class="token string">"header header header"</span>\n  <span class="token string">"advert content content"</span>\n  <span class="token string">"advert footer footer"</span><span class="token punctuation">;</span>\n</code></pre>\n<p>The code above groups the cells of the grid into four areas; <code>header</code>, <code>advert</code>, <code>content</code>, and <code>footer</code>. Every word represents a cell and every pair of quotation marks represent a row.</p>\n',
+      '',
     instructions:
       "\n<p>Change the template so the <code>footer</code> area spans the entire bottom row. Defining the areas won't have any visual effect right now. Later, you will make an item use an area to see how it works.</p>\n",
   },
@@ -1753,7 +1753,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/place-items-in-grid-areas-using-the-grid-area-property',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>After creating an area template for your grid container, as shown in the previous challenge, you can place an item in your custom area by referencing the name you gave it. To do this, you use the <code>grid-area</code> property on an item like this:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">.item1</span> <span class="token punctuation">{</span>\n  <span class="token property">grid-area</span><span class="token punctuation">:</span> header<span class="token punctuation">;</span>\n<span class="token punctuation">}</span>\n</code></pre>\n<p>This lets the grid know that you want the <code>item1</code> class to go in the area named <code>header</code>. In this case, the item will use the entire top row because that whole row is named as the header area.</p>\n',
+      '',
     instructions:
       '\n<p>Place an element with the <code>item5</code> class in the <code>footer</code> area using the <code>grid-area</code> property.</p>\n',
   },
@@ -1763,7 +1763,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-area-without-creating-an-areas-template',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The <code>grid-area</code> property you learned in the last challenge can be used in another way. If your grid doesn\'t have an areas template to reference, you can create an area on the fly for an item to be placed like this:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">item1</span> <span class="token punctuation">{</span> <span class="token property">grid-area</span><span class="token punctuation">:</span> 1/1/2/4<span class="token punctuation">;</span> <span class="token punctuation">}</span>\n</code></pre>\n<p>This is using the line numbers you learned about earlier to define where the area for this item will be. The numbers in the example above represent these values:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-area</span><span class="token punctuation">:</span> horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at<span class="token punctuation">;</span>\n</code></pre>\n<p>So the item in the example will consume the rows between lines 1 and 2, and the columns between lines 1 and 4.</p>\n',
+      '',
     instructions:
       '\n<p>Using the <code>grid-area</code> property, place the element with <code>item5</code> class between the third and fourth horizontal lines and between the first and fourth vertical lines.</p>\n',
   },
@@ -1773,7 +1773,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/reduce-repetition-using-the-repeat-function',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>When you used <code>grid-template-columns</code> and <code>grid-template-rows</code> to define the structure of a grid, you entered a value for each row or column you created.</p>\n<p>Let\'s say you want a grid with 100 rows of the same height. It isn\'t very practical to insert 100 values individually. Fortunately, there\'s a better way - by using the <code>repeat</code> function to specify the number of times you want your column or row to be repeated, followed by a comma and the value you want to repeat.</p>\n<p>Here\'s an example that would create the 100 row grid, each row at 50px tall.</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-template-rows</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>100<span class="token punctuation">,</span> 50px<span class="token punctuation">)</span><span class="token punctuation">;</span>\n</code></pre>\n<p>You can also repeat multiple values with the repeat function and insert the function amongst other values when defining a grid structure. Here\'s what that looks like:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>2<span class="token punctuation">,</span> 1fr 50px<span class="token punctuation">)</span> 20px<span class="token punctuation">;</span>\n</code></pre>\n<p>This translates to:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 50px 1fr 50px 20px<span class="token punctuation">;</span>\n</code></pre>\n<p><strong>Note:</strong> The <code>1fr 50px</code> is repeated twice followed by 20px.</p>\n',
+      '',
     instructions:
       '\n<p>Use <code>repeat</code> to remove repetition from the <code>grid-template-columns</code> property.</p>\n',
   },
@@ -1783,7 +1783,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/limit-item-size-using-the-minmax-function',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>There\'s another built-in function to use with <code>grid-template-columns</code> and <code>grid-template-rows</code> called <code>minmax</code>. It\'s used to limit the size of items when the grid container changes size. To do this you need to specify the acceptable size range for your item. Here is an example:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 100px <span class="token function">minmax</span><span class="token punctuation">(</span>50px<span class="token punctuation">,</span> 200px<span class="token punctuation">)</span><span class="token punctuation">;</span>\n</code></pre>\n<p>In the code above, <code>grid-template-columns</code> is set to create two columns; the first is 100px wide, and the second has the minimum width of 50px and the maximum width of 200px.</p>\n',
+      '',
     instructions:
       '\n<p>Using the <code>minmax</code> function, replace the <code>1fr</code> in the <code>repeat</code> function with a column size that has the minimum width of <code>90px</code> and the maximum width of <code>1fr</code>, and resize the preview panel to see the effect.</p>\n',
   },
@@ -1793,7 +1793,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fill',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>The repeat function comes with an option called <dfn>auto-fill</dfn>. This allows you to automatically insert as many rows or columns of your desired size as possible depending on the size of the container. You can create flexible layouts when combining <code>auto-fill</code> with <code>minmax</code>, like this:</p>\n<pre class="language-css" tabindex="0"><code class="language-css"><span class="token function">repeat</span><span class="token punctuation">(</span>auto-fill<span class="token punctuation">,</span> <span class="token function">minmax</span><span class="token punctuation">(</span>60px<span class="token punctuation">,</span> 1fr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>\n</code></pre>\n<p>When the container changes size, this setup keeps inserting 60px columns and stretching them until it can insert another one. <strong>Note:</strong> If your container can\'t fit all your items on one row, it will move them down to a new one.</p>\n',
+      '',
     instructions:
       '\n<p>In the first grid, use <code>auto-fill</code> with <code>repeat</code> to fill the grid with columns that have a minimum width of <code>60px</code> and maximum of <code>1fr</code>. Then resize the preview to see auto-fill in action.</p>\n',
   },
@@ -1803,7 +1803,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit',
     remove: ['ALL_HELPERS'],
     description:
-      "\n<p><code>auto-fit</code> works almost identically to <code>auto-fill</code>. The only difference is that when the container's size exceeds the size of all the items combined, <code>auto-fill</code> keeps inserting empty rows or columns and pushes your items to the side, while <code>auto-fit</code> collapses those empty rows or columns and stretches your items to fit the size of the container.</p>\n<p><strong>Note:</strong> If your container can't fit all your items on one row, it will move them down to a new one.</p>\n",
+      "",
     instructions:
       '\n<p>In the second grid, use <code>auto-fit</code> with <code>repeat</code> to fill the grid with columns that have a minimum width of <code>60px</code> and maximum of <code>1fr</code>. Then resize the preview to see the difference.</p>\n',
   },
@@ -1813,7 +1813,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-media-queries-to-create-responsive-layouts',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>CSS Grid can be an easy way to make your site more responsive by using media queries to rearrange grid areas, change dimensions of a grid, and rearrange the placement of items.</p>\n<p>In the preview, when the viewport width is 300px or more, the number of columns changes from 1 to 2. The advertisement area then occupies the left column completely.</p>\n',
+      '',
     instructions:
       '\n<p>When the viewport width is <code>400px</code> or more, make the header area occupy the top row completely and the footer area occupy the bottom row completely.</p>\n',
   },
@@ -1823,7 +1823,7 @@ const responsiveWebDesignChallenges = [
     url: 'https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids',
     remove: ['ALL_HELPERS'],
     description:
-      '\n<p>Turning an element into a grid only affects the behavior of its direct descendants. So by turning a direct descendant into a grid, you have a grid within a grid.</p>\n<p>For example, by setting the <code>display</code> and <code>grid-template-columns</code> properties of the element with the <code>item3</code> class, you create a grid within your grid.</p>\n',
+      '',
     instructions:
       '\n<p>Turn the element with the <code>item3</code> class into a grid with two columns with a width of <code>auto</code> and <code>1fr</code> using <code>display</code> and <code>grid-template-columns</code>.</p>\n',
   },

@@ -156,6 +156,8 @@ This extension will hide all the help on the Free Code Camp website so you can f
 
 ## Applied Accessibility :construction:
 
+Skipped on purpose at this time.
+
 - [ Add A Text Alternative To Images For Visually Impaired Accessibility](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility)
 - [ Know When Alt Text Should Be Left Blank](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/know-when-alt-text-should-be-left-blank)
 - [ Use Headings To Show Hierarchical Relationships Of Content](https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-headings-to-show-hierarchical-relationships-of-content)
@@ -188,45 +190,45 @@ This extension will hide all the help on the Free Code Camp website so you can f
 
 ## Css Flexbox
 
-- [ Use Display Flex To Position Two Boxes](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-display-flex-to-position-two-boxes)
-- [ Add Flex Superpowers To The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/add-flex-superpowers-to-the-tweet-embed)
-- [ Use The Flex Direction Property To Make A Row](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-row)
-- [ Apply The Flex Direction Property To Create Rows In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed)
-- [ Use The Flex Direction Property To Make A Column](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-column)
-- [ Apply The Flex Direction Property To Create A Column In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-a-column-in-the-tweet-embed)
-- [ Align Elements Using The Justify Content Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-justify-content-property)
-- [ Use The Justify Content Property In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-justify-content-property-in-the-tweet-embed)
-- [ Align Elements Using The Align Items Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-align-items-property)
-- [ Use The Align Items Property In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-items-property-in-the-tweet-embed)
-- [ Use The Flex Wrap Property To Wrap A Row Or Column](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-wrap-property-to-wrap-a-row-or-column)
-- [ Use The Flex Shrink Property To Shrink Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shrink-property-to-shrink-items)
-- [ Use The Flex Grow Property To Expand Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-grow-property-to-expand-items)
-- [ Use The Flex Basis Property To Set The Initial Size Of An Item](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-basis-property-to-set-the-initial-size-of-an-item)
-- [ Use The Flex Shorthand Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shorthand-property)
-- [ Use The Order Property To Rearrange Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-order-property-to-rearrange-items)
-- [ Use The Align Self Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-self-property)
+- [ Use Display Flex To Position Two Boxes](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-display-flex-to-position-two-boxes) :white_check_mark:
+- [ Add Flex Superpowers To The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/add-flex-superpowers-to-the-tweet-embed) :white_check_mark:
+- [ Use The Flex Direction Property To Make A Row](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-row) :white_check_mark:
+- [ Apply The Flex Direction Property To Create Rows In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed) :white_check_mark:
+- [ Use The Flex Direction Property To Make A Column](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-direction-property-to-make-a-column) :white_check_mark:
+- [ Apply The Flex Direction Property To Create A Column In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/apply-the-flex-direction-property-to-create-a-column-in-the-tweet-embed) :white_check_mark:
+- [ Align Elements Using The Justify Content Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-justify-content-property) :white_check_mark:
+- [ Use The Justify Content Property In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-justify-content-property-in-the-tweet-embed) :white_check_mark:
+- [ Align Elements Using The Align Items Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-align-items-property) :white_check_mark:
+- [ Use The Align Items Property In The Tweet Embed](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-items-property-in-the-tweet-embed) :white_check_mark:
+- [ Use The Flex Wrap Property To Wrap A Row Or Column](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-wrap-property-to-wrap-a-row-or-column) :white_check_mark:
+- [ Use The Flex Shrink Property To Shrink Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shrink-property-to-shrink-items) :white_check_mark:
+- [ Use The Flex Grow Property To Expand Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-grow-property-to-expand-items) :white_check_mark:
+- [ Use The Flex Basis Property To Set The Initial Size Of An Item](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-basis-property-to-set-the-initial-size-of-an-item) :white_check_mark:
+- [ Use The Flex Shorthand Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-flex-shorthand-property) :white_check_mark:
+- [ Use The Order Property To Rearrange Items](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-order-property-to-rearrange-items) :white_check_mark:
+- [ Use The Align Self Property](https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/use-the-align-self-property) :white_check_mark:
 
 ## Css Grid
 
-- [ Create Your First Css Grid](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-your-first-css-grid)
-- [ Add Columns With Grid Template Columns](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-columns-with-grid-template-columns)
-- [ Add Rows With Grid Template Rows](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-rows-with-grid-template-rows)
-- [ Use Css Grid Units To Change The Size Of Columns And Rows](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-css-grid-units-to-change-the-size-of-columns-and-rows)
-- [ Create A Column Gap Using Grid Column Gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-column-gap-using-grid-column-gap)
-- [ Create A Row Gap Using Grid Row Gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-row-gap-using-grid-row-gap)
-- [ Add Gaps Faster With Grid Gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-gaps-faster-with-grid-gap)
-- [ Use Grid Column To Control Spacing](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-column-to-control-spacing)
-- [ Use Grid Row To Control Spacing](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing)
-- [ Align An Item Horizontally Using Justify Self](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-horizontally-using-justify-self)
-- [ Align An Item Vertically Using Align Self](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-vertically-using-align-self)
-- [ Align All Items Horizontally Using Justify Items](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-all-items-horizontally-using-justify-items)
-- [ Align All Items Vertically Using Align Items](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-all-items-vertically-using-align-items)
-- [ Divide The Grid Into An Area Template](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/divide-the-grid-into-an-area-template)
-- [ Place Items In Grid Areas Using The Grid Area Property](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/place-items-in-grid-areas-using-the-grid-area-property)
-- [ Use Grid Area Without Creating An Areas Template](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-area-without-creating-an-areas-template)
-- [ Reduce Repetition Using The Repeat Function](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/reduce-repetition-using-the-repeat-function)
-- [ Limit Item Size Using The Minmax Function](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/limit-item-size-using-the-minmax-function)
-- [ Create Flexible Layouts Using Auto Fill](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fill)
-- [ Create Flexible Layouts Using Auto Fit](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit)
-- [ Use Media Queries To Create Responsive Layouts](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-media-queries-to-create-responsive-layouts)
-- [ Create Grids Within Grids](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids)
+- [ Create Your First Css Grid](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-your-first-css-grid) :white_check_mark:
+- [ Add Columns With Grid Template Columns](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-columns-with-grid-template-columns) :white_check_mark:
+- [ Add Rows With Grid Template Rows](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-rows-with-grid-template-rows) :white_check_mark:
+- [ Use Css Grid Units To Change The Size Of Columns And Rows](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-css-grid-units-to-change-the-size-of-columns-and-rows) :white_check_mark:
+- [ Create A Column Gap Using Grid Column Gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-column-gap-using-grid-column-gap) :white_check_mark:
+- [ Create A Row Gap Using Grid Row Gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-a-row-gap-using-grid-row-gap) :white_check_mark:
+- [ Add Gaps Faster With Grid Gap](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/add-gaps-faster-with-grid-gap) :white_check_mark:
+- [ Use Grid Column To Control Spacing](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-column-to-control-spacing) :white_check_mark:
+- [ Use Grid Row To Control Spacing](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-row-to-control-spacing) :white_check_mark:
+- [ Align An Item Horizontally Using Justify Self](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-horizontally-using-justify-self) :white_check_mark:
+- [ Align An Item Vertically Using Align Self](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-an-item-vertically-using-align-self) :white_check_mark:
+- [ Align All Items Horizontally Using Justify Items](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-all-items-horizontally-using-justify-items) :white_check_mark:
+- [ Align All Items Vertically Using Align Items](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/align-all-items-vertically-using-align-items) :white_check_mark:
+- [ Divide The Grid Into An Area Template](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/divide-the-grid-into-an-area-template) :white_check_mark:
+- [ Place Items In Grid Areas Using The Grid Area Property](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/place-items-in-grid-areas-using-the-grid-area-property) :white_check_mark:
+- [ Use Grid Area Without Creating An Areas Template](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-grid-area-without-creating-an-areas-template) :white_check_mark:
+- [ Reduce Repetition Using The Repeat Function](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/reduce-repetition-using-the-repeat-function) :white_check_mark:
+- [ Limit Item Size Using The Minmax Function](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/limit-item-size-using-the-minmax-function) :white_check_mark:
+- [ Create Flexible Layouts Using Auto Fill](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fill) :white_check_mark:
+- [ Create Flexible Layouts Using Auto Fit](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-flexible-layouts-using-auto-fit) :white_check_mark:
+- [ Use Media Queries To Create Responsive Layouts](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/use-media-queries-to-create-responsive-layouts) :white_check_mark:
+- [ Create Grids Within Grids](https://www.freecodecamp.org/learn/responsive-web-design/css-grid/create-grids-within-grids) :white_check_mark:
