@@ -1952,12 +1952,23 @@ function isURLWhitelisted(url) {
   return false;
 }
 
+const appliedAccessibilityURL = 'https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility';
+const responsiveWebDesignPrinciplesURL = 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query';
+const responsiveWebDesignPrinciplesIndex = responsiveWebDesignChallenges.findIndex((challenge) => challenge.url == responsiveWebDesignPrinciplesURL);
+
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   chrome.storage.local.get('challengeIndex', function (items) {
     chrome.storage.local.get('fccUtilityOn', function (_items) {
       const switchOn = _items.fccUtilityOn;
       chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         if (!switchOn) return;
+        if (tabs[0]?.url.startsWith(appliedAccessibilityURL)) {
+          chrome.storage.local.set({ challengeIndex: responsiveWebDesignPrinciplesIndex }, () => {
+            chrome.tabs.update({
+              url: responsiveWebDesignPrinciplesURL,
+            });
+          });
+        }
         if (isURLWhitelisted(tabs[0]?.url)) {
           if (
             tabs[0]?.url.startsWith(
