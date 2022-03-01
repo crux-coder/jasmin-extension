@@ -1829,116 +1829,116 @@ const responsiveWebDesignChallenges = [
   },
 ];
 
-function executeScript(script, params) {
-  chrome.tabs.executeScript({
-    code: '(' + script + ')(' + params + ');', //argument here is a string but function.toString() returns function's code
-  });
-}
+// function executeScript(script, params) {
+//   chrome.tabs.executeScript({
+//     code: '(' + script + ')(' + params + ');', //argument here is a string but function.toString() returns function's code
+//   });
+// }
 
-function clearBreadcrumbTitle() {
-  const breadcrumbTitle = document.querySelector(
-    '.challenge-title-breadcrumbs'
-  );
+// function clearBreadcrumbTitle() {
+//   const breadcrumbTitle = document.querySelector(
+//     '.challenge-title-breadcrumbs'
+//   );
 
-  breadcrumbTitle?.remove();
-}
+//   breadcrumbTitle?.remove();
+// }
 
-function clearDescription() {
-  const description = document.querySelector('#description');
+// function clearDescription() {
+//   const description = document.querySelector('#description');
 
-  if (description) description.innerHTML = '';
-}
+//   if (description) description.innerHTML = '';
+// }
 
-function clearInstructions() {
-  const instructions = document.querySelector('#instructions');
+// function clearInstructions() {
+//   const instructions = document.querySelector('#instructions');
 
-  if (instructions) instructions.innerHTML = '';
-}
+//   if (instructions) instructions.innerHTML = '';
+// }
 
-function clearHelpButton() {
-  const getHelpButton = document.querySelector('#get-help-dropdown');
+// function clearHelpButton() {
+//   const getHelpButton = document.querySelector('#get-help-dropdown');
 
-  getHelpButton?.remove();
-}
+//   getHelpButton?.remove();
+// }
 
-function clearTestCases() {
-  const testCases = document.querySelector('.challenge-test-suite');
+// function clearTestCases() {
+//   const testCases = document.querySelector('.challenge-test-suite');
 
-  testCases?.remove();
-}
+//   testCases?.remove();
+// }
 
-function clearTestOutput() {
-  const output = document.querySelectorAll('.horizontal.reflex-element');
+// function clearTestOutput() {
+//   const output = document.querySelectorAll('.horizontal.reflex-element');
 
-  output[2]?.remove();
-}
+//   output[2]?.remove();
+// }
 
-function clearAllHelpers() {
-  const breadcrumbTitle = document.querySelector(
-    '.challenge-title-breadcrumbs'
-  );
-  const description = document.querySelector('#description');
-  const getHelpButton = document.querySelector('#get-help-dropdown');
-  const testCases = document.querySelector('.challenge-test-suite');
-  const output = document.querySelectorAll('.horizontal.reflex-element');
-  const instructions = document.querySelector('#instructions');
+// function clearAllHelpers() {
+//   const breadcrumbTitle = document.querySelector(
+//     '.challenge-title-breadcrumbs'
+//   );
+//   const description = document.querySelector('#description');
+//   const getHelpButton = document.querySelector('#get-help-dropdown');
+//   const testCases = document.querySelector('.challenge-test-suite');
+//   const output = document.querySelectorAll('.horizontal.reflex-element');
+//   const instructions = document.querySelector('#instructions');
 
-  breadcrumbTitle?.remove();
-  if (description) description.innerHTML = '';
-  if (instructions) instructions.innerHTML = '';
-  getHelpButton?.remove();
-  testCases?.remove();
-  output[2]?.remove();
-}
+//   breadcrumbTitle?.remove();
+//   if (description) description.innerHTML = '';
+//   if (instructions) instructions.innerHTML = '';
+//   getHelpButton?.remove();
+//   testCases?.remove();
+//   output[2]?.remove();
+// }
 
-function addDescription(element) {
-  const description = document.querySelector('#description');
-  if (description) description.innerHTML = element;
-}
+// function addDescription(element) {
+//   const description = document.querySelector('#description');
+//   if (description) description.innerHTML = element;
+// }
 
-function addInstructions(element) {
-  const instructions = document.querySelector('#instructions');
-  if (instructions) instructions.innerHTML = element;
-}
+// function addInstructions(element) {
+//   const instructions = document.querySelector('#instructions');
+//   if (instructions) instructions.innerHTML = element;
+// }
 
-function removeElements(challenge) {
-  if (challenge.remove)
-    challenge.remove.forEach((element) => {
-      switch (element) {
-        case CONSTANTS.ALL_HELPERS:
-          executeScript(clearAllHelpers);
-          break;
-        case CONSTANTS.BREADCRUMB_TITLE:
-          executeScript(clearBreadcrumbTitle);
-          break;
-        case CONSTANTS.DESCRIPTION:
-          executeScript(clearDescription);
-          break;
-        case CONSTANTS.GET_HELP_BUTTON:
-          executeScript(clearHelpButton);
-          break;
-        case CONSTANTS.TEST_CASES:
-          executeScript(clearTestCases);
-          break;
-        case CONSTANTS.TEST_OUTPUT:
-          executeScript(clearTestOutput);
-          break;
-        default:
-          executeScript(clearAllHelpers);
-          break;
-      }
-    });
-}
+// function removeElements(challenge) {
+//   if (challenge.remove)
+//     challenge.remove.forEach((element) => {
+//       switch (element) {
+//         case CONSTANTS.ALL_HELPERS:
+//           executeScript(clearAllHelpers);
+//           break;
+//         case CONSTANTS.BREADCRUMB_TITLE:
+//           executeScript(clearBreadcrumbTitle);
+//           break;
+//         case CONSTANTS.DESCRIPTION:
+//           executeScript(clearDescription);
+//           break;
+//         case CONSTANTS.GET_HELP_BUTTON:
+//           executeScript(clearHelpButton);
+//           break;
+//         case CONSTANTS.TEST_CASES:
+//           executeScript(clearTestCases);
+//           break;
+//         case CONSTANTS.TEST_OUTPUT:
+//           executeScript(clearTestOutput);
+//           break;
+//         default:
+//           executeScript(clearAllHelpers);
+//           break;
+//       }
+//     });
+// }
 
-function addElements(challenge) {
-  executeScript(addDescription, '`' + challenge.description + '`');
-  executeScript(addInstructions, '`' + challenge.instructions + '`');
-}
+// function addElements(challenge) {
+//   executeScript(addDescription, '`' + challenge.description + '`');
+//   executeScript(addInstructions, '`' + challenge.instructions + '`');
+// }
 
-function clearHelpers(challenge) {
-  removeElements(challenge);
-  addElements(challenge);
-}
+// function clearHelpers(challenge) {
+//   removeElements(challenge);
+//   addElements(challenge);
+// }
 
 function isURLWhitelisted(url) {
   if (!url) return false;
@@ -1950,56 +1950,70 @@ function isURLWhitelisted(url) {
   return false;
 }
 
+function executeClearScript() {
+  chrome.tabs.executeScript({
+    file: 'content.js',
+  });
+}
+
 const appliedAccessibilityURL = 'https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/add-a-text-alternative-to-images-for-visually-impaired-accessibility';
 const responsiveWebDesignPrinciplesURL = 'https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-principles/create-a-media-query';
 const responsiveWebDesignPrinciplesIndex = responsiveWebDesignChallenges.findIndex((challenge) => challenge.url == responsiveWebDesignPrinciplesURL);
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  chrome.storage.local.get('challengeIndex', function (items) {
-    chrome.storage.local.get('fccUtilityOn', function (_items) {
-      const switchOn = _items.fccUtilityOn;
-      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-        if (!switchOn) return;
-        if (tabs[0]?.url.startsWith(appliedAccessibilityURL)) {
-          chrome.storage.local.set({ challengeIndex: responsiveWebDesignPrinciplesIndex }, () => {
-            chrome.tabs.update({
-              url: responsiveWebDesignPrinciplesURL,
+  console.log(changeInfo);
+  if (changeInfo.status == "complete") {
+    chrome.storage.local.get('challengeIndex', function (items) {
+      chrome.storage.local.get('fccUtilityOn', function (_items) {
+        const switchOn = _items.fccUtilityOn;
+        chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+          if (!switchOn) return;
+          if (tabs[0]?.url.startsWith(appliedAccessibilityURL)) {
+            chrome.storage.local.set({ challengeIndex: responsiveWebDesignPrinciplesIndex }, () => {
+              chrome.tabs.update({
+                url: responsiveWebDesignPrinciplesURL,
+              });
             });
-          });
-        }
-        if (isURLWhitelisted(tabs[0]?.url)) {
-          if (
-            tabs[0]?.url.startsWith(
-              responsiveWebDesignChallenges[items.challengeIndex].url
+          }
+          if (isURLWhitelisted(tabs[0]?.url)) {
+            if (
+              tabs[0]?.url.startsWith(
+                responsiveWebDesignChallenges[items.challengeIndex].url
+              )
             )
-          )
-            clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
-          else if (
-            tabs[0]?.url.startsWith(
-              responsiveWebDesignChallenges[items.challengeIndex + 1].url
-            )
-          ) {
-            clearHelpers(
-              responsiveWebDesignChallenges[items.challengeIndex + 1]
-            );
-            chrome.storage.local.set({
-              challengeIndex: items.challengeIndex + 1,
-            });
+              executeClearScript();
+            // clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
+            else if (
+              tabs[0]?.url.startsWith(
+                responsiveWebDesignChallenges[items.challengeIndex + 1].url
+              )
+            ) {
+              // clearHelpers(
+              //   responsiveWebDesignChallenges[items.challengeIndex + 1]
+              // );
+              chrome.storage.local.set({
+                challengeIndex: items.challengeIndex + 1,
+              }, () => {
+                executeClearScript();
+              });
+            } else {
+              chrome.tabs.update({
+                url: responsiveWebDesignChallenges[items.challengeIndex].url,
+              });
+              executeClearScript();
+              // clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
+            }
           } else {
             chrome.tabs.update({
               url: responsiveWebDesignChallenges[items.challengeIndex].url,
             });
-            clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
+            executeClearScript();
+            // clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
           }
-        } else {
-          chrome.tabs.update({
-            url: responsiveWebDesignChallenges[items.challengeIndex].url,
-          });
-          clearHelpers(responsiveWebDesignChallenges[items.challengeIndex]);
-        }
+        });
       });
     });
-  });
+  }
 });
 
 (function () {
