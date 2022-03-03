@@ -2,7 +2,7 @@
   "browser_action": {
     "browser_style": true,
     "default_title": "jasmins-extension",
-    "default_popup": "index.html",
+    "default_popup": "build/index.html",
     "default_icon": "logo.png"
   },
   "icons": {
@@ -28,5 +28,5 @@
     "storage"
   ],
   "version": "0.3",
-  "content_security_policy": "default-src 'self'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';img-src 'self' data: *; script-src 'self'"
+  "content_security_policy": "default-src 'self'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';img-src 'self' data: *; script-src 'self' 'sha256-fdAfMKZtCTRPKMRznGwonJHC++vCCrQS7XFnVrzSXAE='"
 }
