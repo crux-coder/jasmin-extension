@@ -1,3 +1,5 @@
+let modalFound = false;
+
 /**
  * Removes breadcrumb title/navigation from the page.
  */
@@ -5,7 +7,7 @@ function removeBreadcrumbTitle() {
   const breadcrumbTitle = document.querySelector(
     '.challenge-title-breadcrumbs'
   );
-  console.log(breadcrumbTitle);
+
   breadcrumbTitle?.remove();
 }
 
@@ -125,10 +127,43 @@ function populateElements(challenge) {
   populateInstructions(challenge.instructions);
 }
 
+function toggleExtensionOnIndicator() {
+  const navBar = document.querySelector('nav');
+
+  navBar.style.backgroundColor = 'green';
+}
+
+/**
+ * Removes saved code from local storage.
+ */
+function clearCodeSaveFromLocalStorage() {
+  for (var i = 0; i < localStorage.length; i++) {
+    if (
+      localStorage.key(i) === 'fcc-sound' ||
+      localStorage.key(i) === 'accessibilityMode' ||
+      localStorage.key(i) === 'currentChallengeId'
+    )
+      continue;
+    localStorage.removeItem(localStorage.key(i));
+  }
+}
+
+function toggleRedHighlight() {
+  const codeEditor = document.querySelector('.horizontal .reflex-container');
+  codeEditor.style.border = '3px solid #D1534C';
+}
+
+function addRunButtonListener() {
+  const runButton = document.querySelector(
+    '[aria-label="Run the tests use shortcut Ctrl+enter"]'
+  );
+
+  if (runButton) runButton.addEventListener('click', toggleRedHighlight);
+}
+
 /**
  * Document listener
  */
-let modalFound = false;
 function addListenerDocument() {
   const logMutations = function (mutations, observer) {
     for (const mutation of mutations) {
@@ -137,6 +172,10 @@ function addListenerDocument() {
         const modal = document.querySelector('[role="dialog"] .modal');
         if (modal) {
           modalFound = true;
+          const codeEditor = document.querySelector(
+            '.horizontal .reflex-container'
+          );
+          codeEditor.style.border = '';
           chrome.storage.local.get('CHALLENGE_INDEX', function (items) {
             const { CHALLENGE_INDEX } = items;
             chrome.storage.local.set({
@@ -163,6 +202,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         const { CHALLENGE_INDEX, RESPONSIVE_WEB_DESIGN_CHALLNEGES } = items;
         removeHelperElements(RESPONSIVE_WEB_DESIGN_CHALLNEGES[CHALLENGE_INDEX]);
         populateElements(RESPONSIVE_WEB_DESIGN_CHALLNEGES[CHALLENGE_INDEX]);
+        clearCodeSaveFromLocalStorage();
+        addRunButtonListener();
+        toggleExtensionOnIndicator();
       }
     );
 

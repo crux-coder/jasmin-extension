@@ -15,7 +15,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.freecodecamp.org/*"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ],
   "description": "Extension for taking the Jasmin's test..",
