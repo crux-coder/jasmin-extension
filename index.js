@@ -68,6 +68,7 @@ function populateDropdown(RESPONSIVE_WEB_DESIGN_CHALLNEGES) {
       select.appendChild(section);
       section = document.createElement('optgroup');
       section.label = RESPONSIVE_WEB_DESIGN_CHALLNEGES[i].section;
+      counter = 1;
     }
     const option = document.createElement('option');
     option.value = RESPONSIVE_WEB_DESIGN_CHALLNEGES[i].url;

@@ -1,5 +1,3 @@
-let modalFound = false;
-
 /**
  * Removes breadcrumb title/navigation from the page.
  */
@@ -165,6 +163,7 @@ function addRunButtonListener() {
  * Document listener
  */
 function addListenerDocument() {
+  let modalFound = false;
   const logMutations = function (mutations, observer) {
     for (const mutation of mutations) {
       if (modalFound) return;
@@ -172,9 +171,7 @@ function addListenerDocument() {
         const modal = document.querySelector('[role="dialog"] .modal');
         if (modal) {
           modalFound = true;
-          const codeEditor = document.querySelector(
-            '.horizontal .reflex-container'
-          );
+          const codeEditor = document.querySelector('.horizontal .reflex-container');
           codeEditor.style.border = '';
           chrome.storage.local.get('CHALLENGE_INDEX', function (items) {
             const { CHALLENGE_INDEX } = items;
@@ -202,13 +199,13 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         const { CHALLENGE_INDEX, RESPONSIVE_WEB_DESIGN_CHALLNEGES } = items;
         removeHelperElements(RESPONSIVE_WEB_DESIGN_CHALLNEGES[CHALLENGE_INDEX]);
         populateElements(RESPONSIVE_WEB_DESIGN_CHALLNEGES[CHALLENGE_INDEX]);
-        clearCodeSaveFromLocalStorage();
+        addListenerDocument();
         addRunButtonListener();
         toggleExtensionOnIndicator();
       }
     );
 
-    addListenerDocument();
+    clearCodeSaveFromLocalStorage();
   }
   sendResponse({ result: 'success' });
 });
